@@ -38,7 +38,7 @@ window.UEBUNG = {
     ] },
     { teil: 'B4', titel: 'Grammatik: Sätze bauen', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة.', typ: 'words', items: [
       { q: 'Infinitiv Vergangenheit (.)', w: ['ich', 'bin', 'froh,', 'die Operation', 'gut', 'überstanden', 'zu', 'haben'], a: ['ich bin froh, die operation gut überstanden zu haben'] },
-      { q: 'ohne + Akkusativ (.)', w: ['ohne', 'ärztliche', 'Verordnung', 'bekommen Sie', 'dieses Medikament', 'nicht'], a: ['ohne ärztliche verordnung bekommen sie dieses medikament nicht'] }
+      { q: 'ohne + Akkusativ (.)', w: ['ohne', 'ärztliche', 'Verordnung', 'bekommen Sie', 'dieses Medikament', 'nicht'], a: ['ohne ärztliche verordnung bekommen sie dieses medikament nicht', 'dieses medikament bekommen sie ohne ärztliche verordnung nicht'] }
     ] },
     { teil: 'C1', titel: 'Sprechen: Was antworten Sie?', anweisung: 'Lesen Sie, was die Person sagt. Welche Antwort ist am angemessensten?', anweisungAr: 'اختر الرد الأنسب.', typ: 'mcq', items: [
       { q: 'Ärztin: „Haben Sie in letzter Zeit Medikamente eingenommen?“', o: ['Ja, seit einer Woche nehme ich wegen meiner Allergie täglich ein Antihistaminikum.', 'Vielleicht.', 'Das weiß ich nicht mehr, ist das wichtig?'], a: 'Ja, seit einer Woche nehme ich wegen meiner Allergie täglich ein Antihistaminikum.' },

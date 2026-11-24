@@ -31,7 +31,7 @@ window.UEBUNG = {
       { q: 'Nur ein Wort wird negiert (nicht heute, sondern morgen):', o: ['Ich gehe nicht heute, sondern morgen ins Theater.', 'Ich gehe heute nicht, sondern morgen ins Theater.', 'Ich gehe heute ins Theater nicht, sondern morgen.'], a: 'Ich gehe nicht heute, sondern morgen ins Theater.' }
     ] },
     { titel: 'Grammatik: Negation im Satz', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة مع nicht في المكان الصحيح.', typ: 'words', items: [
-      { q: 'Satz (.)', w: ['ich', 'kann', 'dir', 'das Buch', 'leider', 'nicht', 'leihen'], a: ['ich kann dir das buch leider nicht leihen', 'leider kann ich dir das buch nicht leihen'] },
+      { q: 'Satz (.)', w: ['ich', 'kann', 'dir', 'das Buch', 'leider', 'nicht', 'leihen'], a: ['ich kann dir das buch leider nicht leihen', 'leider kann ich dir das buch nicht leihen', 'ich kann dir leider das buch nicht leihen'] },
       { q: 'Satz (.)', w: ['wir', 'interessieren', 'uns', 'nicht', 'für', 'moderne Kunst'], a: ['wir interessieren uns nicht für moderne kunst'] }
     ] },
     { titel: 'Grammatik: Adjektive ohne Artikel', anweisung: 'Ergänzen Sie die richtige Endung.', anweisungAr: 'الصفة بدون أداة تأخذ نهاية أداة التعريف: guter Wein (der), frische Milch (die), kaltes Wasser (das)، وفي الجمع: alte Bilder، وفي Dativ الجمع: mit alten Bildern.', typ: 'select', items: [

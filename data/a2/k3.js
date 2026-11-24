@@ -64,10 +64,10 @@ window.UEBUNG = {
       { q: 'Satz (.)', w: ['der Film zeigt,', 'dass', 'Freundschaft', 'wichtig', 'ist'], a: ['der Film zeigt, dass Freundschaft wichtig ist'] }
     ] },
     { titel: 'Redemittel: Die eigene Meinung ausdrücken', anweisung: 'Ergänzen Sie die Redemittel.', anweisungAr: 'أكمل عبارات التعبير عن الرأي.', typ: 'select', o: ['glaube', 'finde es', 'bin froh', 'mag es nicht', 'Es ist'], items: [
-      { q: 'Ich ___, dass soziale Medien nützlich sind.', a: 'glaube' },
-      { q: 'Ich ___ wichtig, dass Kinder nicht zu lange online sind.', a: 'finde es' },
-      { q: 'Ich ___, dass ich meine Familie per Videochat sehen kann.', a: 'bin froh' },
-      { q: 'Ich ___, dass mein Chef mir am Wochenende Mails schreibt.', a: 'mag es nicht' },
+      { q: 'Ich ___, dass soziale Medien nützlich sind. (Meinung)', o: ['glaube', 'finde es', 'Es ist'], a: 'glaube' },
+      { q: 'Ich ___ wichtig, dass Kinder nicht zu lange online sind.', o: ['finde es', 'glaube', 'bin froh'], a: 'finde es' },
+      { q: 'Ich ___, dass ich meine Familie per Videochat sehen kann. (Freude)', o: ['bin froh', 'mag es nicht', 'finde es'], a: 'bin froh' },
+      { q: 'Ich ___, dass mein Chef mir am Wochenende Mails schreibt. (Ärger)', o: ['mag es nicht', 'bin froh', 'Es ist'], a: 'mag es nicht' },
       { q: '___ schlecht, dass man so viel Zeit am Handy verbringt.', a: 'Es ist' }
     ] },
     { titel: 'Redemittel: Einen Film beschreiben und kommentieren', anweisung: 'Beschreibung, positiver oder negativer Kommentar?', anweisungAr: 'هل الجملة وصف للفيلم، أم تعليق إيجابي، أم تعليق سلبي؟', typ: 'select', o: ['Beschreibung', 'positiv', 'negativ'], items: [

@@ -50,9 +50,9 @@ window.UEBUNG = {
       { q: 'Ich stelle ___ meine Freunde vor. (du)', o: ['dir', 'dich', 'du'], a: 'dir' }
     ] },
     { titel: 'Grammatik: Dativ vor Akkusativ', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة: الشخص (Dativ) قبل الشيء (Akkusativ)، أما إذا كان الشيء ضميرًا فيأتي أولًا.', typ: 'words', items: [
-      { q: 'Satz (.)', w: ['der Trainer', 'zeigt', 'den Kindern', 'die Übung'], a: ['der Trainer zeigt den Kindern die Übung'] },
-      { q: 'Satz (.)', w: ['ich', 'empfehle', 'dir', 'diesen Kurs'], a: ['ich empfehle dir diesen Kurs'] },
-      { q: 'Satz mit Pronomen (.)', w: ['ich', 'schicke', 'es', 'dir', 'morgen'], a: ['ich schicke es dir morgen'] }
+      { q: 'Satz (.)', w: ['der Trainer', 'zeigt', 'den Kindern', 'die Übung'], a: ['der Trainer zeigt den Kindern die Übung', 'den Kindern zeigt der Trainer die Übung', 'die Übung zeigt der Trainer den Kindern'] },
+      { q: 'Satz (.)', w: ['ich', 'empfehle', 'dir', 'diesen Kurs'], a: ['ich empfehle dir diesen Kurs', 'dir empfehle ich diesen Kurs', 'diesen Kurs empfehle ich dir'] },
+      { q: 'Satz mit Pronomen (.)', w: ['ich', 'schicke', 'es', 'dir', 'morgen'], a: ['ich schicke es dir morgen', 'morgen schicke ich es dir'] }
     ] },
     { titel: 'Redemittel: Gefühle beim Sport', anweisung: 'Begeisterung, Hoffnung oder Enttäuschung?', anweisungAr: 'هل يعبّر المتحدث عن حماس، أم أمل، أم خيبة أمل؟', typ: 'select', o: ['Begeisterung', 'Hoffnung', 'Enttäuschung'], items: [
       { q: '„Wahnsinn! Das war großartig!“', a: 'Begeisterung' },

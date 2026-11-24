@@ -55,9 +55,9 @@ window.UEBUNG = {
       { q: '„Nein danke, es geht schon.“', a: 'Hilfe ablehnen' }
     ] },
     { titel: 'Redemittel: Warnen und Informationen weitergeben', anweisung: 'Ergänzen Sie.', anweisungAr: 'أكمل عبارات التحذير ونقل المعلومات.', typ: 'select', o: ['Vorsicht', 'Pass auf', 'Achtung', 'hat gesagt, dass', 'Laut'], items: [
-      { q: '___, der Boden ist nass!', a: 'Vorsicht' },
-      { q: '___, dass du dich nicht verletzt!', a: 'Pass auf' },
-      { q: '___! Das Medikament nicht mit Alkohol einnehmen.', a: 'Achtung' },
+      { q: '___, der Boden ist nass!', o: ['Vorsicht', 'Laut', 'hat gesagt, dass'], a: 'Vorsicht' },
+      { q: '___, dass du dich nicht verletzt!', o: ['Pass auf', 'Vorsicht', 'Achtung'], a: 'Pass auf' },
+      { q: '___! Das Medikament nicht mit Alkohol einnehmen.', o: ['Achtung', 'Laut', 'hat gesagt, dass'], a: 'Achtung' },
       { q: 'Die Ärztin ___ ich drei Tage im Bett bleiben soll.', a: 'hat gesagt, dass' },
       { q: '___ Packungsbeilage soll man die Tabletten nach dem Essen nehmen.', a: 'Laut' }
     ] },

@@ -53,8 +53,8 @@ window.UEBUNG = {
     { titel: 'Die Satzklammer im Perfekt', anweisung: 'Bauen Sie den Satz. Das Partizip steht am Ende.', anweisungAr: 'يأتي haben/sein في الموقع الثاني، ويأتي الـ Partizip في آخر الجملة.', typ: 'words', items: [
       { q: 'Aussagesatz (.)', w: ['ich', 'habe', 'gestern', 'viel', 'gearbeitet'], a: ['ich habe gestern viel gearbeitet', 'gestern habe ich viel gearbeitet'] },
       { q: 'W-Frage (?)', w: ['was', 'hast', 'du', 'am Wochenende', 'gemacht'], a: ['was hast du am Wochenende gemacht'] },
-      { q: 'Aussagesatz (.)', w: ['wir', 'sind', 'mit dem Zug', 'gefahren'], a: ['wir sind mit dem Zug gefahren'] },
-      { q: 'Aussagesatz (.)', w: ['sie', 'hat', 'eine Bewerbung', 'geschrieben'], a: ['sie hat eine Bewerbung geschrieben'] }
+      { q: 'Aussagesatz (.)', w: ['wir', 'sind', 'mit dem Zug', 'gefahren'], a: ['wir sind mit dem Zug gefahren', 'mit dem Zug sind wir gefahren'] },
+      { q: 'Aussagesatz (.)', w: ['sie', 'hat', 'eine Bewerbung', 'geschrieben'], a: ['sie hat eine Bewerbung geschrieben', 'eine Bewerbung hat sie geschrieben'] }
     ] },
     { titel: 'Am Telefon', anweisung: 'Was passt? Wählen Sie.', anweisungAr: 'اختر الرد المناسب في المكالمة الهاتفية.', typ: 'mcq', items: [
       { q: 'Firma Schulz, Becker am Apparat. Guten Tag!', o: ['Guten Tag, hier ist Omar Saleh.', 'Auf Wiederhören!', 'Ich habe Feierabend.'], a: 'Guten Tag, hier ist Omar Saleh.' },

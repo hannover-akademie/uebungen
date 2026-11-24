@@ -23,7 +23,7 @@ window.UEBUNG = {
       { q: 'Wir ___ gern öfter zu Hause. (sein)', a: ['wären', 'waeren'] },
       { q: 'Er ___ gern mehr lesen. (würde + Infinitiv)', a: ['würde', 'wuerde'] },
       { q: '___ du gern einen Hund? (haben)', a: ['Hättest', 'Haettest'] },
-      { q: 'Ihr ___ jetzt bestimmt gern am Strand. (sein)', a: ['wärt', 'waert', 'wäret'] },
+      { q: 'Ihr ___ jetzt bestimmt gern am Strand. (sein)', a: ['wärt', 'waert', 'wäret', 'waeret'] },
       { q: 'Sie ___ gern eine Weltreise machen. (sie, Plural)', a: ['würden', 'wuerden'] }
     ] },
     { titel: 'Grammatik: Wunsch, Ratschlag oder Bitte?', anweisung: 'Wozu verwendet man hier den Konjunktiv II?', anweisungAr: 'لأيّ غرض استُعملت صيغة Konjunktiv II هنا: أمنية، أم نصيحة، أم طلب مهذّب؟', typ: 'select', o: ['Wunsch', 'Ratschlag', 'höfliche Bitte'], items: [
@@ -60,7 +60,7 @@ window.UEBUNG = {
       { q: '„Ich habe eine Idee: Wir grillen im Park.“', a: 'Vorschlag' },
       { q: '„Das geht bei mir leider nicht.“', a: 'ablehnen' },
       { q: '„Klar, gern. Ja, das passt!“', a: 'zustimmen' },
-      { q: '„Wir könnten doch auch eine Radtour machen.“', a: 'Gegenvorschlag' }
+      { q: '„Wir könnten doch lieber eine Radtour machen.“', a: 'Gegenvorschlag' }
     ] },
     { titel: 'Redemittel: Ein Ausflug wird geplant', anweisung: 'Bringen Sie den Dialog in die richtige Reihenfolge.', anweisungAr: 'رتّب الحوار.', typ: 'order', items: [
       { q: 'Ausflug mit dem Kurs', lines: [

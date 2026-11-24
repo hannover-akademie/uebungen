@@ -53,13 +53,13 @@ window.UEBUNG = {
       { q: 'Er ___ zwei Wochen bei seiner Oma geblieben.', o: ['ist', 'hat'], a: 'ist' },
       { q: 'Wir ___ die Ausbildung im Sommer beendet.', o: ['haben', 'sind'], a: 'haben' },
       { q: 'Der Film ___ mir sehr gut gefallen.', o: ['hat', 'ist'], a: 'hat' },
-      { q: '___ du schon einmal geritten?', o: ['Bist', 'Hast'], a: 'Bist' },
+      { q: '___ du schon einmal auf einem Pferd geritten?', o: ['Bist', 'Hast'], a: 'Bist' },
       { q: 'Ich ___ gestern lange Überstunden gemacht.', o: ['habe', 'bin'], a: 'habe' }
     ] },
     { titel: 'Grammatik: Die Satzklammer im Perfekt', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة: haben/sein في الموقع الثاني، والـ Partizip في آخر الجملة.', typ: 'words', items: [
-      { q: 'Aussagesatz (.)', w: ['ich', 'habe', 'meine Frau', 'im Urlaub', 'kennengelernt'], a: ['ich habe meine Frau im Urlaub kennengelernt', 'im Urlaub habe ich meine Frau kennengelernt'] },
+      { q: 'Aussagesatz (.)', w: ['ich', 'habe', 'meine Frau', 'im Urlaub', 'kennengelernt'], a: ['ich habe meine Frau im Urlaub kennengelernt', 'im Urlaub habe ich meine Frau kennengelernt', 'ich habe im Urlaub meine Frau kennengelernt', 'meine Frau habe ich im Urlaub kennengelernt'] },
       { q: 'W-Frage (?)', w: ['wann', 'bist', 'du', 'nach Deutschland', 'gekommen'], a: ['wann bist du nach Deutschland gekommen'] },
-      { q: 'Aussagesatz (.)', w: ['letztes Jahr', 'sind', 'wir', 'durch Spanien', 'gereist'], a: ['letztes Jahr sind wir durch Spanien gereist', 'wir sind letztes Jahr durch Spanien gereist'] }
+      { q: 'Aussagesatz (.)', w: ['letztes Jahr', 'sind', 'wir', 'durch Spanien', 'gereist'], a: ['letztes Jahr sind wir durch Spanien gereist', 'wir sind letztes Jahr durch Spanien gereist', 'durch Spanien sind wir letztes Jahr gereist'] }
     ] },
     { titel: 'Grammatik: Nebensatz mit weil', anweisung: 'Welcher Satz ist richtig?', anweisungAr: 'بعد weil يأتي الفاعل، ويأتي الفعل المصرَّف في آخر الجملة.', typ: 'mcq', items: [
       { q: 'Ich gehe heute nicht ins Kino, weil …', o: ['ich keine Zeit habe.', 'ich habe keine Zeit.', 'habe ich keine Zeit.'], a: 'ich keine Zeit habe.' },

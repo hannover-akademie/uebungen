@@ -12,7 +12,7 @@ window.UEBUNG = {
         { q: 'Lücke 2: ___', o: ['Dennoch', 'Ebenso', 'Stattdessen'], a: 'Dennoch' },
         { q: 'Lücke 3: ___', o: ['Mittlerweile', 'Bis dahin', 'Zuvor'], a: 'Mittlerweile' },
         { q: 'Lücke 4: ___', o: ['darüber', 'darauf', 'daran'], a: 'darüber' },
-        { q: 'Lücke 5: ___', o: ['Stattdessen', 'Allerdings', 'Zuvor'], a: 'Stattdessen' },
+        { q: 'Lücke 5: ___', o: ['Stattdessen', 'Ebenso', 'Zuvor'], a: 'Stattdessen' },
         { q: 'Lücke 6: ___', o: ['auszahlt', 'bezahlt', 'zahlt'], a: 'auszahlt' }
       ] },
     { teil: 'B1', titel: 'Wortschatz: Kunst, Film, Literatur', anweisung: 'Ergänzen Sie den passenden Ausdruck.', anweisungAr: 'أكمل بالتعبير المناسب.', typ: 'select', o: ['Leseratte', 'Drehbuch', 'Geistesblitz', 'Vernissage', 'Kassenschlager', 'fesselnd'], items: [
@@ -28,7 +28,7 @@ window.UEBUNG = {
       { q: 'Die Ausstellung besteht ___ über hundert Werken junger Künstler.', o: ['aus', 'auf', 'in'], a: 'aus' },
       { q: 'Der Regisseur bestand ___, die Szene noch einmal zu drehen.', o: ['darauf', 'daraus', 'darin'], a: 'darauf' },
       { q: 'Beim Brainstorming kommt es ___ an, Ideen zunächst nicht zu bewerten.', o: ['darauf', 'darin', 'davon'], a: 'darauf' },
-      { q: 'Viele Schriftsteller leiden ___ Schreibblockaden.', o: ['unter', 'an', 'von'], a: 'unter' },
+      { q: 'Viele Schriftsteller leiden ___ Schreibblockaden.', o: ['unter', 'mit', 'von'], a: 'unter' },
       { q: 'Die Schwierigkeit besteht ___, ein Publikum zu finden.', o: ['darin', 'daraus', 'darauf'], a: 'darin' }
     ] },
     { teil: 'B3', titel: 'Grammatik: Nominal- und Verbalform', anweisung: 'Welcher Satz hat dieselbe Bedeutung?', anweisungAr: 'المكمّل بحرف الجر يمكن أن يكون اسمًا أو جملة dass أو جملة مصدرية: Ich freue mich auf die Ausstellung ↔ Ich freue mich darauf, die Ausstellung zu sehen.', typ: 'mcq', items: [

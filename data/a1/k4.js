@@ -19,12 +19,12 @@ window.UEBUNG = {
       ] }
     ] },
     { titel: 'Packungen und Mengen', anweisung: 'Was passt? Wählen Sie.', anweisungAr: 'اختر وحدة القياس المناسبة.', typ: 'select', o: ['eine Flasche', 'ein Becher', 'eine Packung', 'ein Kilo', 'ein Stück', 'eine Tüte'], items: [
-      { q: '___ Wasser', a: 'eine Flasche' },
-      { q: '___ Joghurt', a: 'ein Becher' },
-      { q: '___ Kartoffeln', a: 'ein Kilo' },
-      { q: '___ Kuchen', a: 'ein Stück' },
-      { q: '___ Nudeln', a: 'eine Packung' },
-      { q: '___ Brötchen (mitnehmen)', a: 'eine Tüte' }
+      { q: '___ Wasser', o: ['eine Flasche', 'ein Stück', 'ein Becher'], a: 'eine Flasche' },
+      { q: '___ Joghurt', o: ['ein Becher', 'ein Stück', 'eine Flasche'], a: 'ein Becher' },
+      { q: '___ Kartoffeln', o: ['ein Kilo', 'ein Becher', 'eine Flasche'], a: 'ein Kilo' },
+      { q: '___ Kuchen', o: ['ein Stück', 'eine Flasche', 'ein Becher'], a: 'ein Stück' },
+      { q: '___ Nudeln', o: ['eine Packung', 'eine Flasche', 'ein Becher'], a: 'eine Packung' },
+      { q: '___ Brötchen (mitnehmen)', o: ['eine Tüte', 'eine Flasche', 'ein Becher'], a: 'eine Tüte' }
     ] },
     { titel: 'Akkusativ: einen, ein, eine', anweisung: 'Ergänzen Sie den Artikel im Akkusativ.', anweisungAr: 'يتغيّر المذكّر في حالة النصب: ein ← einen، أما المؤنث والمحايد فلا يتغيّران.', typ: 'select', o: ['einen', 'ein', 'eine'], items: [
       { q: 'Ich brauche ___ Apfel.', a: 'einen' },
@@ -72,9 +72,9 @@ window.UEBUNG = {
       ] }
     ] },
     { titel: 'Position im Satz', anweisung: 'Bauen Sie den Satz. Das Verb steht auf Position 2.', anweisungAr: 'يأتي الفعل دائمًا في الموقع الثاني من الجملة.', typ: 'words', items: [
-      { q: 'Aussagesatz (.)', w: ['am Morgen', 'esse', 'ich', 'ein Müsli'], a: ['am Morgen esse ich ein Müsli', 'ich esse am Morgen ein Müsli'] },
-      { q: 'Aussagesatz (.)', w: ['zum Mittagessen', 'trinkt', 'er', 'Wasser'], a: ['zum Mittagessen trinkt er Wasser', 'er trinkt zum Mittagessen Wasser'] },
-      { q: 'Aussagesatz (.)', w: ['heute', 'kaufen', 'wir', 'Fisch'], a: ['heute kaufen wir Fisch', 'wir kaufen heute Fisch'] },
+      { q: 'Aussagesatz (.)', w: ['am Morgen', 'esse', 'ich', 'ein Müsli'], a: ['am Morgen esse ich ein Müsli', 'ich esse am Morgen ein Müsli', 'ein Müsli esse ich am Morgen'] },
+      { q: 'Aussagesatz (.)', w: ['zum Mittagessen', 'trinkt', 'er', 'Wasser'], a: ['zum Mittagessen trinkt er Wasser', 'er trinkt zum Mittagessen Wasser', 'Wasser trinkt er zum Mittagessen'] },
+      { q: 'Aussagesatz (.)', w: ['heute', 'kaufen', 'wir', 'Fisch'], a: ['heute kaufen wir Fisch', 'wir kaufen heute Fisch', 'Fisch kaufen wir heute'] },
       { q: 'W-Frage (?)', w: ['was', 'isst', 'du', 'gern'], a: ['was isst du gern'] }
     ] },
     { titel: 'Mahlzeiten', anweisung: 'Frühstück, Mittagessen oder Abendessen?', anweisungAr: 'فطور أم غداء أم عشاء؟', typ: 'select', o: ['das Frühstück', 'das Mittagessen', 'das Abendessen'], items: [

@@ -27,11 +27,11 @@ window.UEBUNG = {
       { q: 'Wir finden das T-Shirt toll. Es gefällt ___. (wir)', o: ['uns', 'wir', 'euch'], a: 'uns' }
     ] },
     { titel: 'Verben mit Dativ', anweisung: 'gefallen, passen, stehen, gehören, helfen? Ergänzen Sie.', anweisungAr: 'أفعال تأخذ Dativ: gefallen (يُعجِب)، passen (يناسب مقاسًا)، stehen (يليق بـ)، gehören (يخصّ / مِلك لـ).', typ: 'select', o: ['gefällt', 'passt', 'steht', 'gehört', 'hilft'], items: [
-      { q: 'Die Hose ist zu klein. Sie ___ mir nicht.', a: 'passt' },
-      { q: 'Die Farbe ist super! Das Kleid ___ dir sehr gut.', a: 'steht' },
-      { q: 'Wem ___ die Tasche? – Mir.', a: 'gehört' },
-      { q: 'Der Film ist toll. Er ___ mir sehr.', a: 'gefällt' },
-      { q: 'Die Verkäuferin ___ dem Kunden.', a: 'hilft' }
+      { q: 'Die Hose ist zu klein. Sie ___ mir nicht. (Größe)', o: ['passt', 'gehört', 'hilft'], a: 'passt' },
+      { q: 'Die Farbe ist super! Das Kleid ___ dir sehr gut. (sieht an dir gut aus)', o: ['steht', 'gehört', 'hilft'], a: 'steht' },
+      { q: 'Wem ___ die Tasche? – Mir.', o: ['gehört', 'steht', 'hilft'], a: 'gehört' },
+      { q: 'Der Film ist toll. Er ___ mir sehr.', o: ['gefällt', 'gehört', 'passt'], a: 'gefällt' },
+      { q: 'Die Verkäuferin ___ dem Kunden.', o: ['hilft', 'passt', 'steht'], a: 'hilft' }
     ] },
     { titel: 'Welcher? – Dieser!', anweisung: 'Ergänzen Sie welcher/welches/welche und dieser/dieses/diese.', anweisungAr: 'welcher = أيّ، dieser = هذا. نهايتهما مثل أداة التعريف: der ← -er، das ← -es، die ← -e.', typ: 'select', items: [
       { q: '___ Jacke gefällt dir? (die Jacke)', o: ['Welche', 'Welcher', 'Welches'], a: 'Welche' },

@@ -74,8 +74,8 @@ window.UEBUNG = {
     { titel: 'Sätze bauen', anweisung: 'Klicken Sie die Wörter in der richtigen Reihenfolge.', anweisungAr: 'رتّب الكلمات.', typ: 'words', items: [
       { q: 'W-Frage (?)', w: ['wo', 'ist', 'der Bahnhof'], a: ['wo ist der Bahnhof'] },
       { q: 'Ja/Nein-Frage (?)', w: ['ist', 'das', 'ein Hotel'], a: ['ist das ein Hotel'] },
-      { q: 'Imperativ (!)', w: ['gehen', 'Sie', 'zuerst', 'rechts'], a: ['gehen Sie zuerst rechts'] },
-      { q: 'Aussagesatz (.)', w: ['Hamburg', 'ist', 'sehr', 'schön'], a: ['Hamburg ist sehr schön'] }
+      { q: 'Imperativ (!)', w: ['gehen', 'Sie', 'zuerst', 'rechts'], a: ['gehen Sie zuerst rechts', 'zuerst gehen Sie rechts'] },
+      { q: 'Aussagesatz (.)', w: ['Hamburg', 'ist', 'sehr', 'schön'], a: ['Hamburg ist sehr schön', 'sehr schön ist Hamburg'] }
     ] },
     { titel: 'Lesen: Das Hafenfest', anweisung: 'Lesen Sie den Text. Richtig oder falsch?', anweisungAr: 'اقرأ النص. هل العبارة صحيحة أم خاطئة؟', typ: 'tf',
       text: 'Das Hafenfest in Hamburg ist im Mai. Es ist drei Tage lang. Man sieht viele Schiffe, es gibt Musik und Konzerte. Viele Besucher kommen mit der U-Bahn oder mit dem Fahrrad. Das Fest ist kostenlos. Nur das große Konzert am Sonntag kostet 15 Euro. Tickets gibt es online.',

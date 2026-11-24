@@ -37,7 +37,7 @@ window.UEBUNG = {
     { titel: 'Grammatik: Passiv mit Modalverben', anweisung: 'Bauen Sie den Satz im Passiv.', anweisungAr: 'المبني للمجهول مع فعل الكيفية: Modalverb + Partizip II + werden في آخر الجملة.', typ: 'words', items: [
       { q: 'Passiv mit Modalverb (.)', w: ['der Müll', 'muss', 'getrennt', 'werden'], a: ['der müll muss getrennt werden'] },
       { q: 'Passiv mit Modalverb (.)', w: ['im Park', 'dürfen', 'keine Hunde', 'mitgenommen', 'werden'], a: ['im park dürfen keine hunde mitgenommen werden', 'keine hunde dürfen im park mitgenommen werden'] },
-      { q: 'Passiv mit Modalverb (.)', w: ['das Formular', 'kann', 'auch', 'online', 'ausgefüllt', 'werden'], a: ['das formular kann auch online ausgefüllt werden'] }
+      { q: 'Passiv mit Modalverb (.)', w: ['das Formular', 'kann', 'auch', 'online', 'ausgefüllt', 'werden'], a: ['das formular kann auch online ausgefüllt werden', 'das formular kann online auch ausgefüllt werden'] }
     ] },
     { titel: 'Grammatik: Aktiv oder Passiv?', anweisung: 'Formen Sie den Satz ins Passiv um. Ergänzen Sie das Partizip.', anweisungAr: 'حوّل الجملة إلى المبني للمجهول: اكتب التصريف الثالث (Partizip II).', typ: 'gap', items: [
       { q: 'Man repariert die Fahrräder kostenlos. → Die Fahrräder werden kostenlos ___.', a: ['repariert'] },

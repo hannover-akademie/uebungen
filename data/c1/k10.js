@@ -54,7 +54,7 @@ window.UEBUNG = {
     { teil: 'C2', titel: 'Sprechen: Von Erinnerungen erzählen', anweisung: 'Wozu dient der Ausdruck?', anweisungAr: 'ما وظيفة كل تعبير عند الحديث عن الذكريات؟', typ: 'select', o: ['sich erinnern', 'sich nicht erinnern', 'Gefühle beschreiben'], items: [
       { q: '„Ich sehe es noch genau vor mir.“', a: 'sich erinnern' },
       { q: '„Das ist mir völlig entfallen.“', a: 'sich nicht erinnern' },
-      { q: '„Wenn ich daran zurückdenke, wird mir ganz warm ums Herz.“', a: 'Gefühle beschreiben' },
+      { q: '„Das macht mich bis heute glücklich.“', a: 'Gefühle beschreiben' },
       { q: '„Ich kann mich dunkel daran erinnern, dass …“', a: 'sich erinnern' },
       { q: '„Da muss ich passen – keine Ahnung mehr.“', a: 'sich nicht erinnern' },
       { q: '„Der Gedanke daran macht mich noch heute traurig.“', a: 'Gefühle beschreiben' }

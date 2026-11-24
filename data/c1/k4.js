@@ -9,7 +9,7 @@ window.UEBUNG = {
       text: 'Vom Kohlenpott zur Wissensregion\nÜber 150 Jahre lang prägte der Bergbau das Ruhrgebiet. Nach dem Zweiten Weltkrieg arbeiteten dort fast 500 000 Menschen unter Tage, viele von ihnen Zuwanderer aus Italien, der Türkei oder Polen. Seit den 1960er-Jahren jedoch wurde die heimische Steinkohle zunehmend durch billigere Importkohle und Erdöl verdrängt. Zeche um Zeche wurde geschlossen, bis 2018 mit „Prosper-Haniel“ in Bottrop das letzte Steinkohlebergwerk Deutschlands seinen Betrieb einstellte. Der Strukturwandel verlief schmerzhaft: Ganze Stadtteile verloren ihre wirtschaftliche Grundlage, und die Arbeitslosigkeit lag lange über dem Bundesdurchschnitt. Inzwischen hat sich die Region jedoch neu erfunden. Wo früher Fördertürme standen, entstanden Universitäten, Technologieparks und Kulturstätten. Die Zeche Zollverein in Essen gehört seit 2001 sogar zum UNESCO-Welterbe und zieht jährlich Hunderttausende Besucher an. Kritiker bemängeln allerdings, dass vom Aufschwung längst nicht alle profitieren.',
       items: [
         { q: 'Im Ruhrgebiet arbeiteten viele Menschen aus dem Ausland im Bergbau.', a: 'Ja' },
-        { q: 'Die Kohle aus dem Ruhrgebiet wurde wegen ihrer schlechten Qualität ersetzt.', a: 'Nein' },
+        { q: 'Die Kohle aus dem Ruhrgebiet wurde durch teurere Kohle aus dem Ausland ersetzt.', a: 'Nein' },
         { q: 'Seit 2018 wird in Deutschland keine Steinkohle mehr abgebaut.', a: 'Ja' },
         { q: 'Die meisten ehemaligen Bergleute haben eine Stelle an einer Universität gefunden.', a: 'Text sagt dazu nichts' },
         { q: 'Die Zeche Zollverein ist heute ein Ort für Touristen.', a: 'Ja' },

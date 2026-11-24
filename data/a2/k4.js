@@ -43,12 +43,12 @@ window.UEBUNG = {
       { q: 'Sie möchte ___ für die Geschenke bedanken.', a: 'sich' }
     ] },
     { titel: 'Grammatik: Reflexive Verben', anweisung: 'Welches Verb passt? Wählen Sie.', anweisungAr: 'اختر الفعل الانعكاسي المناسب.', typ: 'select', o: ['ausruhen', 'entschuldigen', 'unterhalten', 'entscheiden', 'wohlfühlen', 'verabschieden'], items: [
-      { q: 'Nach der Arbeit möchte ich mich ein bisschen ___.', a: 'ausruhen' },
-      { q: 'Ich komme zu spät. Ich möchte mich ___.', a: 'entschuldigen' },
-      { q: 'Auf der Party habe ich mich lange mit Tim ___.', a: 'unterhalten' },
-      { q: 'Rot oder Blau? Ich kann mich nicht ___.', a: 'entscheiden' },
-      { q: 'In meiner neuen Wohnung kann ich mich ___.', a: 'wohlfühlen' },
-      { q: 'Es ist spät. Wir müssen uns jetzt ___.', a: 'verabschieden' }
+      { q: 'Nach der Arbeit möchte ich mich ein bisschen ___.', o: ['ausruhen', 'entschuldigen', 'entscheiden'], a: 'ausruhen' },
+      { q: 'Ich komme zu spät. Ich möchte mich ___.', o: ['entschuldigen', 'wohlfühlen', 'unterhalten'], a: 'entschuldigen' },
+      { q: 'Auf der Party habe ich mich lange mit Tim ___.', o: ['unterhalten', 'entschieden', 'ausgeruht'], a: 'unterhalten' },
+      { q: 'Rot oder Blau? Ich kann mich nicht ___.', o: ['entscheiden', 'verabschieden', 'unterhalten'], a: 'entscheiden' },
+      { q: 'Die Nachbarn sind nett und die Wohnung ist schön. Hier kann ich mich ___.', o: ['wohlfühlen', 'entschuldigen', 'entscheiden'], a: 'wohlfühlen' },
+      { q: 'Es ist spät und unsere Gäste gehen nach Hause. Wir müssen uns jetzt ___.', o: ['verabschieden', 'entscheiden', 'wohlfühlen'], a: 'verabschieden' }
     ] },
     { titel: 'Redemittel: Glückwünsche und Dank', anweisung: 'Was sagen oder schreiben Sie? Wählen Sie.', anweisungAr: 'ماذا تقول أو تكتب في هذا الموقف؟', typ: 'mcq', items: [
       { q: 'Ihre Freunde heiraten.', o: ['Herzlichen Glückwunsch zur Hochzeit!', 'Gute Besserung!', 'So ein Pech!'], a: 'Herzlichen Glückwunsch zur Hochzeit!' },

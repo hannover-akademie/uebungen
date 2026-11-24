@@ -30,8 +30,8 @@ window.UEBUNG = {
       { q: 'TeKaMoLo im Nebensatz:', o: ['…, weil sie seit Jahren aus beruflichen Gründen in Wien lebt.', '…, weil sie in Wien seit Jahren aus beruflichen Gründen lebt.', '…, weil sie lebt seit Jahren aus beruflichen Gründen in Wien.'], a: '…, weil sie seit Jahren aus beruflichen Gründen in Wien lebt.' }
     ] },
     { teil: 'B3', titel: 'Grammatik: Sätze bauen', anweisung: 'Bauen Sie den Satz in der üblichen Reihenfolge.', anweisungAr: 'رتّب الجملة بالترتيب المعتاد.', typ: 'words', items: [
-      { q: 'Satz (.)', w: ['wir', 'sind', 'letztes Jahr', 'aus beruflichen Gründen', 'mit der ganzen Familie', 'nach Leipzig', 'gezogen'], a: ['wir sind letztes jahr aus beruflichen gründen mit der ganzen familie nach leipzig gezogen'] },
-      { q: 'Satz (.)', w: ['ich', 'habe', 'meinem Kollegen', 'die Situation', 'noch einmal', 'erklärt'], a: ['ich habe meinem kollegen die situation noch einmal erklärt'] }
+      { q: 'Satz (.)', w: ['wir', 'sind', 'letztes Jahr', 'aus beruflichen Gründen', 'mit der ganzen Familie', 'nach Leipzig', 'gezogen'], a: ['wir sind letztes jahr aus beruflichen gründen mit der ganzen familie nach leipzig gezogen', 'letztes jahr sind wir aus beruflichen gründen mit der ganzen familie nach leipzig gezogen'] },
+      { q: 'Satz (.)', w: ['ich', 'habe', 'meinem Kollegen', 'die Situation', 'noch einmal', 'erklärt'], a: ['ich habe meinem kollegen die situation noch einmal erklärt', 'ich habe meinem kollegen noch einmal die situation erklärt', 'ich habe noch einmal meinem kollegen die situation erklärt', 'noch einmal habe ich meinem kollegen die situation erklärt'] }
     ] },
     { teil: 'B4', titel: 'Grammatik: Negation', anweisung: 'Wählen Sie die richtige Negation.', anweisungAr: 'نفي الجملة بـ nicht (قبل الظرف والمكمّل وحرف الجر)، ونفي الاسم بـ kein، وكلمات النفي: nie, niemand, nichts, nirgends, weder … noch. وأيضًا السوابق واللواحق: un-, -los.', typ: 'select', items: [
       { q: 'Ich habe ___ Heimweh mehr.', o: ['kein', 'nicht', 'nie'], a: 'kein' },

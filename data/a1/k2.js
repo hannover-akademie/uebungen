@@ -62,7 +62,7 @@ window.UEBUNG = {
       { q: 'Frau Meier ___ zwei Kinder.', o: ['hat', 'ist', 'habt'], a: 'hat' },
       { q: 'Wir ___ Kollegen.', o: ['sind', 'haben', 'seid'], a: 'sind' },
       { q: 'Ihr ___ aus Polen.', o: ['seid', 'habt', 'sind'], a: 'seid' },
-      { q: 'Am Sonntag ___ wir frei.', o: ['haben', 'sind', 'habt'], a: 'haben' },
+      { q: 'Am Sonntag ___ wir keine Zeit.', o: ['haben', 'sind', 'habt'], a: 'haben' },
       { q: '___ du Student?', o: ['Bist', 'Hast', 'Ist'], a: 'Bist' }
     ] },
     { titel: 'Der, das oder die?', anweisung: 'Wählen Sie den Artikel.', anweisungAr: 'اختر أداة التعريف.', typ: 'select', o: ['der', 'das', 'die'], items: [
@@ -78,7 +78,7 @@ window.UEBUNG = {
       { q: 'die Firma – die …', o: ['Firmen', 'Firmas', 'Firme'], a: 'Firmen' }
     ] },
     { titel: 'Ja/Nein-Fragen', anweisung: 'Bilden Sie Fragen. Das Verb steht am Anfang.', anweisungAr: 'كوّن سؤالًا جوابه نعم أو لا. يأتي الفعل في أول الجملة.', typ: 'words', items: [
-      { q: 'Frage (?)', w: ['spielst', 'du', 'gern', 'Fußball'], a: ['spielst du gern Fußball'] },
+      { q: 'Frage (?)', w: ['spielst', 'du', 'gern', 'Fußball'], a: ['spielst du gern Fußball', 'spielst du Fußball gern'] },
       { q: 'Frage (?)', w: ['arbeiten', 'Sie', 'am Samstag'], a: ['arbeiten Sie am Samstag'] },
       { q: 'Frage (?)', w: ['hast', 'du', 'heute', 'Zeit'], a: ['hast du heute Zeit'] },
       { q: 'Frage (?)', w: ['ist', 'er', 'Arzt'], a: ['ist er Arzt'] }

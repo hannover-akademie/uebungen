@@ -14,7 +14,7 @@ window.UEBUNG = {
       { q: 'Die ___ zwischen Hamburg und München beträgt fast 800 Kilometer.', a: 'Entfernung' }
     ] },
     { titel: 'Wortschatz: Stimmung im Urlaub', anweisung: 'Wie ist die Stimmung? Wählen Sie.', anweisungAr: 'كيف كانت الحالة المزاجية؟ اختر الصفة المناسبة.', typ: 'select', o: ['begeistert', 'enttäuscht', 'verzweifelt', 'genervt', 'gut gelaunt'], items: [
-      { q: 'Das Hotel war viel schlechter als auf den Fotos. Wir waren sehr ___.', a: 'enttäuscht' },
+      { q: 'Wir hatten uns so auf das Hotel gefreut, aber es war viel schlechter als auf den Fotos. Wir waren sehr ___.', a: 'enttäuscht' },
       { q: 'Der Ausblick war fantastisch! Alle waren ___.', a: 'begeistert' },
       { q: 'Wir hatten kein Geld und keinen Pass mehr. Ich war total ___.', a: 'verzweifelt' },
       { q: 'Die Kinder haben die ganze Fahrt gestritten. Ich war ziemlich ___.', a: 'genervt' },

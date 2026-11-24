@@ -71,8 +71,8 @@ window.UEBUNG = {
       { q: 'Wo stellen wir den Fernseher hin?', o: ['Ins Wohnzimmer, neben das Regal.', 'Er ist schwarz.', 'Im Februar.'], a: 'Ins Wohnzimmer, neben das Regal.' }
     ] },
     { titel: 'Sätze bauen', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة.', typ: 'words', items: [
-      { q: 'Aussagesatz (.)', w: ['die Wohnung', 'ist', 'hell', 'und', 'gemütlich'], a: ['die Wohnung ist hell und gemütlich'] },
-      { q: 'Aussagesatz (.)', w: ['ich', 'stelle', 'die Pflanze', 'auf den Balkon'], a: ['ich stelle die Pflanze auf den Balkon'] },
+      { q: 'Aussagesatz (.)', w: ['die Wohnung', 'ist', 'hell', 'und', 'gemütlich'], a: ['die Wohnung ist hell und gemütlich', 'die Wohnung ist gemütlich und hell'] },
+      { q: 'Aussagesatz (.)', w: ['ich', 'stelle', 'die Pflanze', 'auf den Balkon'], a: ['ich stelle die Pflanze auf den Balkon', 'die Pflanze stelle ich auf den Balkon', 'auf den Balkon stelle ich die Pflanze'] },
       { q: 'W-Frage (?)', w: ['wo', 'steht', 'die Waschmaschine'], a: ['wo steht die Waschmaschine'] }
     ] },
     { titel: 'Schreiben: Meine Wohnung', anweisung: 'Beschreiben Sie Ihre Wohnung: Wie viele Zimmer? Wie ist sie? Was steht im Wohnzimmer? Was gefällt Ihnen? (ca. 35 Wörter)', anweisungAr: 'صِف شقتك: كم غرفة فيها؟ وكيف هي؟ وماذا يوجد في غرفة المعيشة؟ وما الذي يعجبك فيها؟ نحو 35 كلمة.', typ: 'write', items: [

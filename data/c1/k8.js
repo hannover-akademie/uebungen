@@ -39,7 +39,7 @@ window.UEBUNG = {
       { q: 'Er spricht perfekt Arabisch. Er ___ längere Zeit in Ägypten gelebt haben. (wahrscheinlich)', o: ['dürfte', 'will', 'sollte'], a: 'dürfte' }
     ] },
     { teil: 'B4', titel: 'Grammatik: Sätze bauen', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة.', typ: 'words', items: [
-      { q: 'Vermutung, Vergangenheit (.)', w: ['er', 'muss', 'die Prüfung', 'sehr gut', 'vorbereitet', 'haben'], a: ['er muss die prüfung sehr gut vorbereitet haben'] },
+      { q: 'Vermutung, Vergangenheit (.)', w: ['er', 'muss', 'die Prüfung', 'sehr gut', 'vorbereitet', 'haben'], a: ['er muss die prüfung sehr gut vorbereitet haben', 'die prüfung muss er sehr gut vorbereitet haben'] },
       { q: 'fremde Behauptung (.)', w: ['Mädchen', 'sollen', 'früher', 'sprechen lernen', 'als', 'Jungen'], a: ['mädchen sollen früher sprechen lernen als jungen'] }
     ] },
     { teil: 'C1', titel: 'Sprechen: Vermutungen und Diskussion', anweisung: 'Lesen Sie, was die Person sagt. Welche Antwort ist am angemessensten?', anweisungAr: 'اختر الرد الأنسب.', typ: 'mcq', items: [

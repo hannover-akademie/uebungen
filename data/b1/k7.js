@@ -21,8 +21,8 @@ window.UEBUNG = {
       { q: 'Sie regt sich jeden Tag … den Lärm auf.', o: ['über', 'auf', 'an'], a: 'über' }
     ] },
     { titel: 'Grammatik: Plusquamperfekt', anweisung: 'Ergänzen Sie hatte/hatten oder war/waren.', anweisungAr: 'الماضي الأسبق: hatte/war (Präteritum) + Partizip II، لحدث وقع قبل حدث آخر في الماضي.', typ: 'select', items: [
-      { q: 'Wir ___ uns fast jeden Tag getroffen.', o: ['hatten', 'waren', 'hätten'], a: 'hatten' },
-      { q: 'Früher ___ wir viel zusammen gereist.', o: ['waren', 'hatten', 'sind'], a: 'waren' },
+      { q: 'Wir ___ uns fast jeden Tag getroffen.', o: ['hatten', 'waren', 'wurden'], a: 'hatten' },
+      { q: 'Früher ___ wir viel zusammen gereist.', o: ['waren', 'hatten', 'wurden'], a: 'waren' },
       { q: 'Er ___ den Zug schon verpasst, als ich ankam.', o: ['hatte', 'war', 'hat'], a: 'hatte' },
       { q: 'Sie ___ gerade eingeschlafen, als das Telefon klingelte.', o: ['war', 'hatte', 'ist'], a: 'war' },
       { q: 'Nachdem ich das Abitur gemacht ___, zog ich nach Berlin.', o: ['hatte', 'war', 'habe'], a: 'hatte' }

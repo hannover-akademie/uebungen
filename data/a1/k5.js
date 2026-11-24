@@ -60,7 +60,7 @@ window.UEBUNG = {
     { titel: 'Die Satzklammer', anweisung: 'Bauen Sie den Satz. Das Modalverb steht auf Position 2, der Infinitiv am Ende.', anweisungAr: 'يأتي الفعل المساعد في الموقع الثاني، ويأتي المصدر في آخر الجملة.', typ: 'words', items: [
       { q: 'Aussagesatz (.)', w: ['ich', 'muss', 'heute', 'arbeiten'], a: ['ich muss heute arbeiten', 'heute muss ich arbeiten'] },
       { q: 'W-Frage (?)', w: ['wann', 'kannst', 'du', 'kommen'], a: ['wann kannst du kommen'] },
-      { q: 'Aussagesatz (.)', w: ['am Samstag', 'wollen', 'wir', 'eine Party', 'machen'], a: ['am Samstag wollen wir eine Party machen', 'wir wollen am Samstag eine Party machen'] },
+      { q: 'Aussagesatz (.)', w: ['am Samstag', 'wollen', 'wir', 'eine Party', 'machen'], a: ['am Samstag wollen wir eine Party machen', 'wir wollen am Samstag eine Party machen', 'eine Party wollen wir am Samstag machen'] },
       { q: 'Ja/Nein-Frage (?)', w: ['können', 'Sie', 'mir', 'helfen'], a: ['können Sie mir helfen'] }
     ] },
     { titel: 'Termine am Telefon', anweisung: 'Was passt? Wählen Sie die Antwort.', anweisungAr: 'اختر الرد المناسب في المكالمة الهاتفية.', typ: 'mcq', items: [

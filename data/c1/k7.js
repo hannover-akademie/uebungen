@@ -26,7 +26,7 @@ window.UEBUNG = {
       { q: 'In der Nacht ___ in drei Geschäfte eingebrochen.', o: ['wurde', 'wurden', 'wurde es'], a: 'wurde' },
       { q: '___ wurde bis spät in die Nacht ermittelt.', o: ['Es', 'Man', 'Er'], a: 'Es' },
       { q: 'Der Täter hat noch am selben Tag gefasst ___. (können)', o: ['werden können', 'worden können', 'können werden'], a: 'werden können' },
-      { q: 'Die Polizei berichtet, dass der Dieb sofort ___. (identifizieren, konnte, Passiv)', o: ['hat identifiziert werden können', 'identifiziert werden konnte hat', 'hat können identifiziert werden'], a: 'hat identifiziert werden können' },
+      { q: 'Die Polizei berichtet, dass der Dieb sofort ___. (identifizieren, können, Passiv, Perfekt)', o: ['hat identifiziert werden können', 'identifiziert werden konnte hat', 'hat können identifiziert werden'], a: 'hat identifiziert werden können' },
       { q: 'Das Geschäft ___ besser gesichert werden müssen. (Konjunktiv II Vergangenheit)', o: ['hätte', 'wäre', 'würde'], a: 'hätte' },
       { q: 'Die Beweise hätten gründlicher ___. (prüfen, sollen)', o: ['geprüft werden sollen', 'prüfen worden sollen', 'geprüft sollen werden'], a: 'geprüft werden sollen' }
     ] },
@@ -38,7 +38,7 @@ window.UEBUNG = {
       { q: 'eine nicht zu erkennende Person', o: ['eine Person, die nicht erkannt werden kann', 'eine Person, die niemanden erkennt', 'eine Person, die erkannt worden ist'], a: 'eine Person, die nicht erkannt werden kann' }
     ] },
     { teil: 'B4', titel: 'Grammatik: Sätze bauen', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة.', typ: 'words', items: [
-      { q: 'Passiv mit Modalverb, Vergangenheit (.)', w: ['der Einbrecher', 'hat', 'noch in der Nacht', 'festgenommen', 'werden', 'können'], a: ['der einbrecher hat noch in der nacht festgenommen werden können'] },
+      { q: 'Passiv mit Modalverb, Vergangenheit (.)', w: ['der Einbrecher', 'hat', 'noch in der Nacht', 'festgenommen', 'werden', 'können'], a: ['der einbrecher hat noch in der nacht festgenommen werden können', 'noch in der nacht hat der einbrecher festgenommen werden können'] },
       { q: 'modales Partizip (.)', w: ['die', 'bis Freitag', 'einzureichenden', 'Unterlagen', 'liegen', 'noch nicht vor'], a: ['die bis freitag einzureichenden unterlagen liegen noch nicht vor'] }
     ] },
     { teil: 'C1', titel: 'Sprechen: Standpunkt vertreten und sich einigen', anweisung: 'Lesen Sie, was die Person sagt. Welche Antwort ist am angemessensten?', anweisungAr: 'اختر الرد الأنسب.', typ: 'mcq', items: [

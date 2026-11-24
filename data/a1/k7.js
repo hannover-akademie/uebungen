@@ -6,15 +6,15 @@ window.UEBUNG = {
     { titel: 'Im Büro', anweisung: 'Was macht man am Computer? Wählen Sie.', anweisungAr: 'ماذا نفعل على الحاسوب؟', typ: 'select', o: ['speichern', 'drucken', 'eingeben', 'öffnen', 'hochfahren'], items: [
       { q: 'Am Morgen den Computer ___', a: 'hochfahren' },
       { q: 'das Passwort ___', a: 'eingeben' },
-      { q: 'eine Datei ___', a: 'öffnen' },
+      { q: 'eine Datei mit Doppelklick ___', a: 'öffnen' },
       { q: 'den Brief auf Papier ___', a: 'drucken' },
-      { q: 'die Datei am Ende ___', a: 'speichern' }
+      { q: 'Vor dem Schließen die Datei ___, sonst ist alles weg.', a: 'speichern' }
     ] },
     { titel: 'und, oder, aber', anweisung: 'Ergänzen Sie.', anweisungAr: 'und = و، oder = أو، aber = لكنّ.', typ: 'select', o: ['und', 'oder', 'aber'], items: [
       { q: 'Ich arbeite im Büro ___ mein Mann arbeitet auch im Büro.', a: 'und' },
       { q: 'Möchtest du Kaffee ___ Tee?', a: 'oder' },
       { q: 'Der Job ist interessant, ___ ich habe viel Stress.', a: 'aber' },
-      { q: 'Wir können heute ___ morgen telefonieren.', a: 'oder' },
+      { q: 'Wir können heute ___ morgen telefonieren. Du kannst wählen.', a: 'oder' },
       { q: 'Ich möchte kommen, ___ ich habe keine Zeit.', a: 'aber' }
     ] },
     { titel: 'Artikel im Dativ', anweisung: 'dem, der oder den? Ergänzen Sie.', anweisungAr: 'حالة الـ Dativ: der ← dem، das ← dem، die ← der، والجمع ← den.', typ: 'select', o: ['dem', 'der', 'den'], items: [
@@ -43,7 +43,7 @@ window.UEBUNG = {
     { titel: 'Medien', anweisung: 'Was passt? Wählen Sie.', anweisungAr: 'اختر الرد المناسب.', typ: 'mcq', items: [
       { q: 'Kannst du mich anrufen?', o: ['Leider nicht, mein Akku ist leer.', 'Ja, ich drucke die Datei.', 'Mit freundlichen Grüßen.'], a: 'Leider nicht, mein Akku ist leer.' },
       { q: 'Hast du WLAN?', o: ['Nein, hier habe ich kein Netz.', 'Ja, ich habe Urlaub.', 'Nein, das Passwort ist lang.'], a: 'Nein, hier habe ich kein Netz.' },
-      { q: 'Kannst du das bitte drucken?', o: ['Klar, der Drucker ist hier.', 'Nein, ich bin offline.', 'Ja, ich habe Pause.'], a: 'Klar, der Drucker ist hier.' }
+      { q: 'Kannst du das bitte drucken?', o: ['Klar, der Drucker ist hier.', 'Nein, ich bin Hausmeister.', 'Ja, ich habe Pause.'], a: 'Klar, der Drucker ist hier.' }
     ] },
     { titel: 'Einen Brief schreiben', anweisung: 'Formeller Brief: Was steht wo? Wählen Sie.', anweisungAr: 'الرسالة الرسمية: أيّ عبارة تأتي في البداية، وأيّها في النهاية؟', typ: 'mcq', items: [
       { q: 'Die Anrede (Anfang) im formellen Brief:', o: ['Sehr geehrte Damen und Herren,', 'Hallo Leute!', 'Tschüs,'], a: 'Sehr geehrte Damen und Herren,' },
@@ -57,7 +57,7 @@ window.UEBUNG = {
       { q: 'Kommst du heute nicht zum Club? – …', o: ['Doch, ich komme um acht.', 'Ja, ich komme nicht.', 'Nein, doch.'], a: 'Doch, ich komme um acht.' }
     ] },
     { titel: 'Sätze bauen', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة.', typ: 'words', items: [
-      { q: 'Aussagesatz (.)', w: ['ich', 'fahre', 'mit dem Fahrrad', 'zur Arbeit'], a: ['ich fahre mit dem Fahrrad zur Arbeit'] },
+      { q: 'Aussagesatz (.)', w: ['ich', 'fahre', 'mit dem Fahrrad', 'zur Arbeit'], a: ['ich fahre mit dem Fahrrad zur Arbeit', 'mit dem Fahrrad fahre ich zur Arbeit', 'zur Arbeit fahre ich mit dem Fahrrad', 'ich fahre zur Arbeit mit dem Fahrrad'] },
       { q: 'Aussagesatz (.)', w: ['der Drucker', 'steht', 'neben dem Fenster'], a: ['der Drucker steht neben dem Fenster', 'neben dem Fenster steht der Drucker'] },
       { q: 'Aussagesatz (.)', w: ['ich', 'habe', 'Zeit,', 'aber', 'kein Geld'], a: ['ich habe Zeit, aber kein Geld'] }
     ] },

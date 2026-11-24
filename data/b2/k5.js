@@ -25,7 +25,7 @@ window.UEBUNG = {
       { q: 'Inzwischen sind über 5000 Planeten außerhalb unseres Sonnensystems entdeckt ___.', o: ['worden', 'geworden', 'werden'], a: 'worden' },
       { q: 'Die Ergebnisse müssen noch genau überprüft ___.', o: ['werden', 'worden', 'wurden'], a: 'werden' },
       { q: 'Das Experiment wurde ___ einer jungen Forscherin geleitet.', o: ['von', 'durch', 'mit'], a: 'von' },
-      { q: 'Viele Unfälle werden ___ Müdigkeit verursacht.', o: ['durch', 'von', 'aus'], a: 'durch' }
+      { q: 'Viele Unfälle werden ___ Müdigkeit verursacht.', o: ['durch', 'mit', 'aus'], a: 'durch' }
     ] },
     { teil: 'B3', titel: 'Grammatik: Passiversatzformen', anweisung: 'Welcher Satz hat dieselbe Bedeutung?', anweisungAr: 'بدائل المبني للمجهول: sein + zu + Infinitiv (يجب/يمكن)، و sich lassen + Infinitiv (يمكن)، والصفات بـ -bar و -lich.', typ: 'mcq', items: [
       { q: 'Das Problem kann gelöst werden.', o: ['Das Problem ist lösbar.', 'Das Problem ist gelöst.', 'Das Problem löst.'], a: 'Das Problem ist lösbar.' },

@@ -4,9 +4,9 @@ window.UEBUNG = {
   kurs: 'Netzwerk neu A2', kapitel: 8, titel: 'Gelernt ist gelernt!',
   titelAr: 'التعلّم والامتحانات والعروض التقديمية – sollte للنصيحة، و Was für ein(e)?',
   teile: [
-    { titel: 'Wortschatz: Lernen und Prüfungen', anweisung: 'Ergänzen Sie das passende Wort.', anweisungAr: 'أكمل بالكلمة المناسبة.', typ: 'select', o: ['mündlich', 'schriftlich', 'Stoff', 'Zeitplan', 'Sprechstunde', 'Stipendium'], items: [
-      { q: 'In der ___ Prüfung muss man mit dem Prüfer sprechen.', a: 'mündlich' },
-      { q: 'In der ___ Prüfung schreibt man Texte.', a: 'schriftlich' },
+    { titel: 'Wortschatz: Lernen und Prüfungen', anweisung: 'Ergänzen Sie das passende Wort.', anweisungAr: 'أكمل بالكلمة المناسبة.', typ: 'select', o: ['mündlichen', 'schriftlichen', 'Stoff', 'Zeitplan', 'Sprechstunde', 'Stipendium'], items: [
+      { q: 'In der ___ Prüfung muss man mit dem Prüfer sprechen.', a: 'mündlichen' },
+      { q: 'In der ___ Prüfung schreibt man Texte.', a: 'schriftlichen' },
       { q: 'Für die Prüfung muss ich viel ___ lernen: zehn Kapitel!', a: 'Stoff' },
       { q: 'Mach dir einen ___: Wann lernst du was?', a: 'Zeitplan' },
       { q: 'Die Professorin hat am Dienstag von 10 bis 12 Uhr ___.', a: 'Sprechstunde' },
@@ -39,7 +39,7 @@ window.UEBUNG = {
     ] },
     { titel: 'Grammatik: Ratschläge mit sollte', anweisung: 'Bauen Sie den Satz. Der Infinitiv steht am Ende.', anweisungAr: 'رتّب الجملة: sollte في الموقع الثاني، والمصدر في آخر الجملة.', typ: 'words', items: [
       { q: 'Ratschlag (.)', w: ['du', 'solltest', 'auch Freizeit', 'einplanen'], a: ['du solltest auch Freizeit einplanen'] },
-      { q: 'Ratschlag (.)', w: ['man', 'sollte', 'jeden Tag', 'ein bisschen', 'lernen'], a: ['man sollte jeden Tag ein bisschen lernen'] },
+      { q: 'Ratschlag (.)', w: ['man', 'sollte', 'jeden Tag', 'ein bisschen', 'lernen'], a: ['man sollte jeden Tag ein bisschen lernen', 'jeden Tag sollte man ein bisschen lernen'] },
       { q: 'Ratschlag (.)', w: ['ihr', 'solltet', 'zusammen', 'üben'], a: ['ihr solltet zusammen üben'] }
     ] },
     { titel: 'Grammatik: Was für ein(e)?', anweisung: 'Ergänzen Sie den Interrogativartikel.', anweisungAr: 'Was für ein يأخذ نهايات أداة النكرة: was für ein / einen / einem / eine / einer، وفي الجمع: was für.', typ: 'select', items: [

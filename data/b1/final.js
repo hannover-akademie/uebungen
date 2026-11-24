@@ -56,7 +56,7 @@ window.UEBUNG = {
       ] },
     // ---------------- B SPRACHBAUSTEINE ----------------
     { teil: 'B1', titel: 'Sprachbausteine Teil 1 (telc B1)', anweisung: 'Lesen Sie den Brief. Welches Wort (a, b oder c) passt in die Lücken 1–6?', anweisungAr: 'اختر الكلمة المناسبة لكل فراغ في الرسالة.', typ: 'select',
-      text: 'Liebe Amira,\nvielen Dank für deine Einladung zu deiner Hochzeit! Ich freue mich sehr __(1)__, dass du endlich heiratest. Leider kann ich nicht kommen, __(2)__ ich genau an diesem Wochenende meine B1-Prüfung habe. Wenn ich Zeit __(3)__, würde ich natürlich sofort kommen! Ich habe dir aber schon ein Geschenk geschickt, __(4)__ du hoffentlich nächste Woche bekommst. __(5)__ ihr aus den Flitterwochen zurück seid, besuche ich euch. Sag mir bitte, __(6)__ euch der Mai passt.\nAlles Liebe\nDeine Dina',
+      text: 'Liebe Amira,\nvielen Dank für deine Einladung zu deiner Hochzeit! Ich freue mich sehr __(1)__, dass du an mich gedacht hast. Leider kann ich nicht kommen, __(2)__ ich genau an diesem Wochenende meine B1-Prüfung habe. Wenn ich Zeit __(3)__, würde ich natürlich sofort kommen! Ich habe dir aber schon ein Geschenk geschickt, __(4)__ du hoffentlich nächste Woche bekommst. __(5)__ ihr aus den Flitterwochen zurück seid, besuche ich euch. Sag mir bitte, __(6)__ euch der Mai passt.\nAlles Liebe\nDeine Dina',
       items: [
         { q: 'Lücke 1: ___', o: ['darüber', 'davon', 'darauf'], a: 'darüber' },
         { q: 'Lücke 2: ___', o: ['weil', 'deshalb', 'trotzdem'], a: 'weil' },
@@ -90,7 +90,7 @@ window.UEBUNG = {
     ] },
     { teil: 'C2', titel: 'Grammatik aus Kapitel 7–12', anweisung: 'Was ist richtig? Wählen Sie.', anweisungAr: 'اختر الإجابة الصحيحة (قواعد الفصول 7–12).', typ: 'mcq', items: [
       { q: 'Nachdem er gegessen ___, ging er spazieren.', o: ['hatte', 'hat', 'war'], a: 'hatte' },
-      { q: '___ du kochst, decke ich den Tisch.', o: ['Während', 'Bevor', 'Seit'], a: 'Während' },
+      { q: '___ du kochst, decke ich den Tisch.', o: ['Während', 'Wegen', 'Trotz'], a: 'Während' },
       { q: 'Sie brauchen nicht zu ___. Ich habe Zeit.', o: ['warten', 'gewartet', 'wartet'], a: 'warten' },
       { q: 'Ich wasche ___ die Hände.', o: ['mir', 'mich', 'sich'], a: 'mir' },
       { q: 'Er spricht ___ Englisch ___ Französisch. (beides)', o: ['sowohl … als auch', 'weder … noch', 'entweder … oder'], a: 'sowohl … als auch' },

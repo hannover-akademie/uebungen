@@ -25,9 +25,9 @@ window.UEBUNG = {
     ] },
     { titel: 'Trennbare Verben im Satz', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة: الفعل في الموقع الثاني، والبادئة في آخر الجملة.', typ: 'words', items: [
       { q: 'Aussagesatz (.)', w: ['der Film', 'fängt', 'um 20 Uhr', 'an'], a: ['der Film fängt um 20 Uhr an', 'um 20 Uhr fängt der Film an'] },
-      { q: 'Aussagesatz (.)', w: ['ich', 'lade', 'dich', 'ein'], a: ['ich lade dich ein'] },
+      { q: 'Aussagesatz (.)', w: ['ich', 'lade', 'dich', 'ein'], a: ['ich lade dich ein', 'dich lade ich ein'] },
       { q: 'Ja/Nein-Frage (?)', w: ['kommst', 'du', 'mit'], a: ['kommst du mit'] },
-      { q: 'Aussagesatz (.)', w: ['wir', 'bringen', 'Kuchen', 'mit'], a: ['wir bringen Kuchen mit'] }
+      { q: 'Aussagesatz (.)', w: ['wir', 'bringen', 'Kuchen', 'mit'], a: ['wir bringen Kuchen mit', 'Kuchen bringen wir mit'] }
     ] },
     { titel: 'Personalpronomen im Akkusativ', anweisung: 'mich, dich, ihn, sie, es, uns, euch? Ergänzen Sie.', anweisungAr: 'ضمائر المفعول به (Akkusativ): mich, dich, ihn, sie, es, uns, euch.', typ: 'select', items: [
       { q: 'Ich habe Geburtstag. Kommst du? Ich lade ___ ein. (du)', o: ['dich', 'dir', 'du'], a: 'dich' },

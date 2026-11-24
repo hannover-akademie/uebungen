@@ -36,7 +36,7 @@ window.UEBUNG = {
       { q: 'Tarik ist viel unterwegs, ___ braucht er eine Powerbank.', o: ['deshalb', 'sodass', 'dass'], a: 'deshalb' },
       { q: 'Online gibt es keine Beratung, ___ Tarik lieber ins Geschäft geht.', o: ['sodass', 'deshalb', 'darum'], a: 'sodass' },
       { q: 'Der Kopfhörer war ___ teuer, dass sie lange sparen musste.', o: ['so', 'sodass', 'deshalb'], a: 'so' },
-      { q: 'Der Akku ist leer, ___ kann ich dich nicht anrufen.', o: ['darum', 'sodass', 'so'], a: 'darum' },
+      { q: 'Der Akku ist leer, ___ kann ich dich nicht anrufen.', o: ['darum', 'sodass', 'dass'], a: 'darum' },
       { q: 'Die Anleitung war kompliziert, ___ wir das Gerät nicht installieren konnten.', o: ['sodass', 'daher', 'deswegen'], a: 'sodass' },
       { q: 'Das Sonderangebot war gut, ___ haben wir zwei Geräte gekauft.', o: ['daher', 'sodass', 'dass'], a: 'daher' }
     ] },
@@ -54,7 +54,7 @@ window.UEBUNG = {
     ] },
     { titel: 'Grammatik: wegen und trotz', anweisung: 'Wählen Sie die richtige Form.', anweisungAr: 'wegen = بسبب، trotz = رغم. وبعدهما Genitiv، وتأخذ الصفة النهاية -en.', typ: 'select', items: [
       { q: 'Wir haben kein Smart Home ___ hohen Kosten.', o: ['wegen der', 'trotz der', 'wegen den'], a: 'wegen der' },
-      { q: 'Die Wohnung ist ___ smarten Technik gemütlich.', o: ['trotz der', 'wegen der', 'trotz die'], a: 'trotz der' },
+      { q: 'Die Miete ist ___ modernen Technik nicht teuer.', o: ['trotz der', 'wegen der', 'trotz die'], a: 'trotz der' },
       { q: '___ Regens sind wir zu Hause geblieben.', o: ['Wegen des', 'Trotz des', 'Wegen dem'], a: 'Wegen des' },
       { q: '___ Garantie musste ich die Reparatur bezahlen.', o: ['Trotz der', 'Wegen der', 'Trotz die'], a: 'Trotz der' },
       { q: 'Er kauft ___ günstigen Preises immer in diesem Geschäft ein.', o: ['wegen des', 'trotz des', 'wegen der'], a: 'wegen des' }

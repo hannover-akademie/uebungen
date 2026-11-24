@@ -44,7 +44,7 @@ window.UEBUNG = {
         { q: 'Lücke 2: ___', o: ['entwickelt', 'verändern', 'entwickeln'], a: 'entwickelt' },
         { q: 'Lücke 3: ___', o: ['Wer', 'Der', 'Was'], a: 'Wer' },
         { q: 'Lücke 4: ___', o: ['unterstützt', 'unterstützen', 'unterstützte'], a: 'unterstützt' },
-        { q: 'Lücke 5: ___', o: ['können', 'kann', 'könnten'], a: 'können' }
+        { q: 'Lücke 5: ___', o: ['können', 'kann', 'konnten'], a: 'können' }
       ] },
     { teil: 'C1', titel: 'Sprechen: Diskutieren', anweisung: 'Lesen Sie, was die Person sagt. Welche Reaktion passt am besten?', anweisungAr: 'اختر الرد الأنسب في النقاش.', typ: 'mcq', items: [
       { q: '„Frauen sind von Natur aus einfach schlechter in Mathematik.“ – Sie widersprechen höflich, aber deutlich.', o: ['Das sehe ich ganz anders. Studien zeigen, dass das vor allem mit Erziehung und Vorbildern zu tun hat.', 'Das ist totaler Unsinn, du hast keine Ahnung.', 'Ja, vielleicht.'], a: 'Das sehe ich ganz anders. Studien zeigen, dass das vor allem mit Erziehung und Vorbildern zu tun hat.' },
