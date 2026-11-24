@@ -37,7 +37,7 @@ window.UEBUNG = {
       { q: 'Wie geht ___ dir? – Danke, gut.', o: ['es', '–'], a: 'es' },
       { q: 'Dass Smalltalk wichtig ist, weiß ___ jeder. (ohne Platzhalter)', o: ['–', 'es'], a: '–' },
       { q: '___ ist unhöflich, den Gesprächspartner nicht anzusehen.', o: ['Es', '–'], a: 'Es' },
-      { q: 'Mir gefällt ___, wenn Menschen beim Sprechen lächeln.', o: ['es', '–'], a: 'es' },
+      { q: 'Ich finde ___ wichtig, dass man dem anderen zuhört.', o: ['es', '–'], a: 'es' },
       { q: 'Heute regnet ___ schon den ganzen Tag.', o: ['es', '–'], a: 'es' },
       { q: 'Gestern wurde ___ lange über das Problem diskutiert. (Passiv ohne Subjekt, es nicht auf Position 1)', o: ['–', 'es'], a: '–' }
     ] },

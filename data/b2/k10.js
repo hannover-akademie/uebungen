@@ -24,7 +24,7 @@ window.UEBUNG = {
     { teil: 'B2', titel: 'Grammatik: Partizipien als Adjektive', anweisung: 'Wählen Sie die richtige Form.', anweisungAr: 'Partizip I (مصدر + d) = فعل يحدث في نفس الوقت وبمعنى الفاعل: der sprechende Roboter. Partizip II = فعل منتهٍ أو بمعنى المفعول: das reparierte Gerät. ويأخذان نهايات الصفة.', typ: 'select', items: [
       { q: 'Der ___ Roboter begrüßt die Gäste. (sprechen)', o: ['sprechende', 'gesprochene', 'sprechend'], a: 'sprechende' },
       { q: 'Das ___ Gerät funktioniert wieder. (reparieren)', o: ['reparierte', 'reparierende', 'repariert'], a: 'reparierte' },
-      { q: 'Die ___ Zahl alter Menschen ist eine Herausforderung. (steigen)', o: ['steigende', 'gestiegene', 'steigenden'], a: 'steigende' },
+      { q: 'Die ___ Zahl alter Menschen ist eine Herausforderung. (steigen, gleichzeitig)', o: ['steigende', 'gestiegene', 'steigenden'], a: 'steigende' },
       { q: 'Die im Internet ___ Diagnose war falsch. (finden)', o: ['gefundene', 'findende', 'gefunden'], a: 'gefundene' },
       { q: 'Wir suchen eine ___ Lösung. (überzeugen)', o: ['überzeugende', 'überzeugte', 'überzeugt'], a: 'überzeugende' },
       { q: 'Die von Studenten ___ App hilft Senioren im Alltag. (entwickeln)', o: ['entwickelte', 'entwickelnde', 'entwickelten'], a: 'entwickelte' }

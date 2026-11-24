@@ -52,8 +52,8 @@ window.UEBUNG = {
       { q: '___ Öffnungszeiten ist die Bibliothek geschlossen. (außerhalb + die Öffnungszeiten)', o: ['Außerhalb der', 'Außerhalb den', 'Außerhalb die'], a: 'Außerhalb der' }
     ] },
     { titel: 'Redemittel: Früher und heute vergleichen', anweisung: 'Ergänzen Sie die Redemittel.', anweisungAr: 'أكمل عبارات المقارنة بين الماضي والحاضر.', typ: 'select', o: ['Im Gegensatz zu', 'Im Vergleich zu', 'hat sich', 'Zum Glück', 'leichter'], items: [
-      { q: '___ früher gibt es heute viel mehr Freizeitangebote.', a: 'Im Vergleich zu' },
-      { q: '___ heute mussten die Lehrlinge früher sehr lange arbeiten.', a: 'Im Gegensatz zu' },
+      { q: '___ früher gibt es heute viel mehr Freizeitangebote.', o: ['Im Vergleich zu', 'Zum Glück', 'hat sich'], a: 'Im Vergleich zu' },
+      { q: '___ heute mussten die Lehrlinge früher sehr lange arbeiten.', o: ['Im Gegensatz zu', 'leichter', 'Zum Glück'], a: 'Im Gegensatz zu' },
       { q: 'Das Leben in meinem Dorf ___ stark verändert.', a: 'hat sich' },
       { q: '___ ist die Schulbildung heute besser.', a: 'Zum Glück' },
       { q: 'Heute ist es ___, mit der Familie im Ausland Kontakt zu halten.', a: 'leichter' }

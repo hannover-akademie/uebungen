@@ -10,7 +10,7 @@ window.UEBUNG = {
         { q: 'Diese Person verbindet Heimat mit einer bestimmten Sprache.', a: 'Julia' },
         { q: 'Diese Person hat ihre Meinung über die Deutschen geändert.', a: 'Ana' },
         { q: 'Für diese Person ist Heimat eher ein Gefühl als ein Ort.', a: 'Samir' },
-        { q: 'Diese Person hat sich nie an einem Ort richtig zu Hause gefühlt.', a: 'Kenji' },
+        { q: 'Diese Person hatte nie eine einzige, feste Heimat.', a: 'Kenji' },
         { q: 'Diese Person hatte zunächst einen kürzeren Aufenthalt geplant.', a: 'Ana' },
         { q: 'Diese Person hielt am Anfang engen Kontakt zur Familie in der alten Heimat.', a: 'Samir' }
       ] },
@@ -22,7 +22,7 @@ window.UEBUNG = {
       { q: 'Wer andere Kulturen kennenlernt, baut ___ ab.', a: 'Vorurteile' },
       { q: 'Obwohl er in Berlin geboren ist, hat er seine ___ in Ägypten.', a: 'Wurzeln' }
     ] },
-    { teil: 'B2', titel: 'Grammatik: Wortstellung im Mittelfeld', anweisung: 'Welcher Satz ist richtig?', anweisungAr: 'الترتيب المعتاد: Temporal – Kausal – Modal – Lokal (TeKaMoLo). والاسم في Dativ قبل الاسم في Akkusativ، لكن ضمير Akkusativ يأتي قبل Dativ.', typ: 'mcq', items: [
+    { teil: 'B2', titel: 'Grammatik: Wortstellung im Mittelfeld', anweisung: 'Welcher Satz hat die übliche (neutrale) Wortstellung?', anweisungAr: 'الترتيب المعتاد: Temporal – Kausal – Modal – Lokal (TeKaMoLo). والاسم في Dativ قبل الاسم في Akkusativ، لكن ضمير Akkusativ يأتي قبل Dativ.', typ: 'mcq', items: [
       { q: 'TeKaMoLo:', o: ['Ich fahre morgen wegen der Hochzeit mit dem Zug nach Kairo.', 'Ich fahre mit dem Zug morgen nach Kairo wegen der Hochzeit.', 'Ich fahre nach Kairo morgen mit dem Zug wegen der Hochzeit.'], a: 'Ich fahre morgen wegen der Hochzeit mit dem Zug nach Kairo.' },
       { q: 'Dativ und Akkusativ (Nomen):', o: ['Sie zeigt ihrer Freundin die neue Wohnung.', 'Sie zeigt die neue Wohnung ihrer Freundin.', 'Sie zeigt die neue Wohnung ihr Freundin.'], a: 'Sie zeigt ihrer Freundin die neue Wohnung.' },
       { q: 'Pronomen:', o: ['Sie zeigt sie ihrer Freundin.', 'Sie zeigt ihrer Freundin sie.', 'Sie zeigt ihr sie.'], a: 'Sie zeigt sie ihrer Freundin.' },
@@ -38,7 +38,7 @@ window.UEBUNG = {
       { q: 'Er versteht den Dialekt ___.', o: ['nicht', 'kein', 'niemand'], a: 'nicht' },
       { q: 'In der neuen Stadt kannte sie am Anfang ___.', o: ['niemanden', 'nichts', 'nirgends'], a: 'niemanden' },
       { q: 'Ich habe meinen Schlüssel ___ gefunden.', o: ['nirgends', 'niemand', 'keine'], a: 'nirgends' },
-      { q: 'Das Missverständnis war ___ – niemand hatte Schuld. (absichtlich)', o: ['unabsichtlich', 'absichtslos', 'nichtabsichtlich'], a: 'unabsichtlich' },
+      { q: 'Das Missverständnis war ___ – niemand hatte Schuld. (absichtlich)', o: ['unabsichtlich', 'absichtlich', 'nichtabsichtlich'], a: 'unabsichtlich' },
       { q: 'Die Diskussion war leider völlig ___. (Ergebnis)', o: ['ergebnislos', 'unergebnis', 'nichtergebnisreich'], a: 'ergebnislos' },
       { q: 'Ich spreche … Schweizerdeutsch … Bayerisch.', o: ['weder … noch', 'nicht … sondern', 'kein … oder'], a: 'weder … noch' }
     ] },

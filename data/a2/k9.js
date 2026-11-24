@@ -79,7 +79,7 @@ window.UEBUNG = {
       { q: '„Okay, das machen wir.“', a: 'zustimmen' }
     ] },
     { titel: 'Lesen: Ein Ort für Sport', anweisung: 'Lesen Sie die Anzeige. Richtig oder falsch?', anweisungAr: 'اقرأ الإعلان. هل العبارة صحيحة أم خاطئة؟', typ: 'tf',
-      text: 'Sportwochenende im Nationalpark Berchtesgaden\nSie möchten sich bewegen und die Natur erleben? Bei uns können Sie klettern, wandern und Kajak fahren. Unsere Führerinnen und Führer zeigen Ihnen die schönsten Strecken. Wir leihen Ihnen alle Sportgeräte: Helme, Klettergurte und Paddel. Sie müssen also nichts mitbringen. Anfänger sind herzlich willkommen, Sie brauchen keine besondere Kondition. Übernachtung im Gasthaus, nur 40 km von Salzburg entfernt. Preis: 189 Euro mit Essen.',
+      text: 'Sportwochenende im Nationalpark Berchtesgaden\nSie möchten sich bewegen und die Natur erleben? Bei uns können Sie klettern, wandern und Kajak fahren. Unsere Führerinnen und Führer zeigen Ihnen die schönsten Strecken. Wir leihen Ihnen alle Sportgeräte: Helme, Klettergurte und Paddel. Sie müssen also nichts mitbringen. Anfänger sind herzlich willkommen, Sie brauchen keine besondere Kondition. Übernachtung im Gasthaus, nicht weit von Salzburg. Preis: 189 Euro mit Essen.',
       items: [
         { q: 'Im Nationalpark kann man auch Kajak fahren.', a: true },
         { q: 'Man muss einen eigenen Helm mitbringen.', a: false },

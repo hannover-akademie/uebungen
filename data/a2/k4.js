@@ -4,13 +4,13 @@ window.UEBUNG = {
   kurs: 'Netzwerk neu A2', kapitel: 4, titel: 'Große und kleine Gefühle',
   titelAr: 'المشاعر والمناسبات والتهاني والشكر – جمل wenn والأفعال الانعكاسية',
   teile: [
-    { titel: 'Wortschatz: Gefühle', anweisung: 'Wie fühlt sich die Person? Wählen Sie.', anweisungAr: 'بماذا يشعر هذا الشخص؟', typ: 'select', o: ['stolz', 'nervös', 'traurig', 'genervt', 'aufgeregt', 'gestresst'], items: [
-      { q: 'Morgen habe ich meine Führerscheinprüfung. Ich bin sehr ___.', a: 'nervös' },
+    { titel: 'Wortschatz: Gefühle', anweisung: 'Wie fühlt sich die Person? Wählen Sie.', anweisungAr: 'بماذا يشعر هذا الشخص؟', typ: 'select', o: ['stolz', 'nervös', 'traurig', 'genervt', 'glücklich', 'gestresst'], items: [
+      { q: 'Morgen habe ich meine Führerscheinprüfung. Ich habe ein bisschen Angst und bin sehr ___.', a: 'nervös' },
       { q: 'Mein Sohn hat das Abitur bestanden. Ich bin so ___ auf ihn!', a: 'stolz' },
       { q: 'Mein Hund ist gestorben. Ich bin sehr ___.', a: 'traurig' },
       { q: 'Der Nachbar macht schon wieder laute Musik. Ich bin total ___.', a: 'genervt' },
-      { q: 'Ich habe drei Prüfungen und muss viel arbeiten. Ich bin ___.', a: 'gestresst' },
-      { q: 'Heute Abend ist unsere Hochzeit! Wir sind sehr ___.', a: 'aufgeregt' }
+      { q: 'Ich arbeite jeden Tag zwölf Stunden und habe nie Pause. Ich bin total ___.', a: 'gestresst' },
+      { q: 'Wir haben im Lotto gewonnen! Wir sind so ___.', a: 'glücklich' }
     ] },
     { titel: 'Wortschatz: Feste und Ereignisse', anweisung: 'Was passt zusammen? Ordnen Sie zu.', anweisungAr: 'صِل بين المناسبة وما يناسبها.', typ: 'match', items: [
       { q: '', pairs: [
@@ -74,12 +74,12 @@ window.UEBUNG = {
       ] }
     ] },
     { titel: 'Lesen: Ein Fest im Norden', anweisung: 'Lesen Sie den Blog. Richtig oder falsch?', anweisungAr: 'اقرأ التدوينة. هل العبارة صحيحة أم خاطئة؟', typ: 'tf',
-      text: 'Das Hafenfest in Hamburg ist bekannt für seine Schiffe und das große Feuerwerk. Es findet immer im Mai statt und dauert drei Tage. Jedes Jahr besuchen über eine Million Menschen die Veranstaltung. Man kann dort Schiffe besichtigen, Fisch essen und Konzerte hören. Das Fest ist kostenlos, nur für einige Schiffe muss man ein Ticket kaufen. Das Fest endet am Sonntagabend mit einem Feuerwerk. Wenn das Wetter schön ist, macht das Fest besonders viel Spaß. Ich war letztes Jahr da und habe mich sehr wohlgefühlt!',
+      text: 'Das Hafenfest in Hamburg ist bekannt für seine Schiffe und das große Feuerwerk. Es findet immer im Mai statt und dauert drei Tage. Jedes Jahr besuchen über eine Million Menschen die Veranstaltung. Man kann dort Schiffe besichtigen, Fisch essen und Konzerte hören. Das Fest ist kostenlos, nur für einige Schiffe muss man ein Ticket kaufen. Am Samstagabend gibt es ein großes Feuerwerk über dem Hafen. Wenn das Wetter schön ist, macht das Fest besonders viel Spaß. Ich war letztes Jahr da und habe mich sehr wohlgefühlt!',
       items: [
         { q: 'Das Hafenfest findet im Mai statt.', a: true },
         { q: 'Das Fest dauert eine Woche.', a: false },
         { q: 'Man muss für das Fest Eintritt bezahlen.', a: false },
-        { q: 'Am Sonntagabend gibt es ein Feuerwerk.', a: true },
+        { q: 'Am Samstagabend gibt es ein Feuerwerk.', a: true },
         { q: 'Die Autorin hat sich auf dem Fest wohlgefühlt.', a: true }
       ] },
     { titel: 'Schreiben: Glückwünsche und Dank', anweisung: 'Ihre Freunde Sara und Ali haben geheiratet. Sie konnten nicht zur Hochzeit kommen. Schreiben Sie eine Karte (60–80 Wörter): Gratulieren Sie. Entschuldigen Sie sich und nennen Sie den Grund (weil …). Erzählen Sie, wie Sie sich gefühlt haben. Machen Sie einen Vorschlag für ein Treffen.', anweisungAr: 'تزوّج صديقاك سارة وعلي ولم تستطع حضور الحفل. اكتب بطاقة (60–80 كلمة): هنّئهما، واعتذر واذكر السبب، وصِف شعورك، واقترح موعدًا للقاء. سيصحّح المحاضر هذا الجزء.', typ: 'write',

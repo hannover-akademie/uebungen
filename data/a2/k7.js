@@ -61,7 +61,7 @@ window.UEBUNG = {
       { q: '„Ich denke, das ist richtig, weil die Luft besser wird.“', a: 'dafür' },
       { q: '„Das funktioniert nicht. Das ist unpraktisch.“', a: 'dagegen' }
     ] },
-    { titel: 'Redemittel: Eine Grafik beschreiben', anweisung: 'Lesen Sie die Grafik und ergänzen Sie.', anweisungAr: 'اقرأ بيانات الرسم وأكمل الجمل.', typ: 'select', text: 'Grafik: Wie kommen die Menschen in Hannover zur Arbeit?\nmit dem Auto: 45 %\nmit Bus und Bahn: 30 %\nmit dem Fahrrad: 20 %\nzu Fuß: 5 %', o: ['Die meisten', 'Nur wenige', '30 Prozent', 'mehr', 'weniger'], items: [
+    { titel: 'Redemittel: Eine Grafik beschreiben', anweisung: 'Lesen Sie die Grafik und ergänzen Sie.', anweisungAr: 'اقرأ بيانات الرسم وأكمل الجمل.', typ: 'select', text: 'Grafik (Umfrage in einer Firma): Wie kommen die Mitarbeiter zur Arbeit?\nmit dem Auto: 45 %\nmit Bus und Bahn: 30 %\nmit dem Fahrrad: 20 %\nzu Fuß: 5 %', o: ['Die meisten', 'Nur wenige', '30 Prozent', 'mehr', 'weniger'], items: [
       { q: '___ fahren mit dem Auto zur Arbeit.', a: 'Die meisten' },
       { q: '___ gehen zu Fuß.', a: 'Nur wenige' },
       { q: '___ fahren mit Bus und Bahn.', a: '30 Prozent' },

@@ -13,9 +13,9 @@ window.UEBUNG = {
       { q: '', pairs: [
         ['eng', 'weit'],
         ['kurz', 'lang'],
-        ['schön', 'doof'],
+        ['schön', 'hässlich'],
         ['teuer', 'billig'],
-        ['neu', 'kaputt']
+        ['neu', 'alt']
       ] }
     ] },
     { titel: 'Personalpronomen im Dativ', anweisung: 'mir, dir, ihm, ihr, uns, euch, Ihnen? Ergänzen Sie.', anweisungAr: 'ضمائر حالة الـ Dativ: mir, dir, ihm, ihr, uns, euch, ihnen, Ihnen.', typ: 'select', items: [

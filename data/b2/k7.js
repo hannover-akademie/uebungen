@@ -33,12 +33,12 @@ window.UEBUNG = {
       { q: 'dadurch, dass (.)', w: ['der Diebstahl', 'wurde', 'dadurch', 'möglich,', 'dass', 'die Alarmanlage', 'kaputt', 'war'], a: ['der diebstahl wurde dadurch möglich, dass die alarmanlage kaputt war'] }
     ] },
     { teil: 'B4', titel: 'Grammatik: Textzusammenhang', anweisung: 'Welches Verweiswort passt?', anweisungAr: 'كلمات الإحالة تربط الجمل: dort (مكان)، damals (زمن)، dabei، deshalb، dies/das، darauf …', typ: 'select', items: [
-      { q: 'Im Jahr 1911 wurde die Mona Lisa gestohlen. ___ arbeitete ein Italiener im Louvre.', o: ['Damals', 'Dort', 'Deshalb'], a: 'Damals' },
+      { q: 'Im Jahr 1911 wurde die Mona Lisa gestohlen. ___ gab es noch keine Überwachungskameras.', o: ['Damals', 'Dort', 'Deshalb'], a: 'Damals' },
       { q: 'Wir waren in Luxor. ___ haben wir den Karnak-Tempel besichtigt.', o: ['Dort', 'Damals', 'Dabei'], a: 'Dort' },
       { q: 'Der Dieb versteckte das Bild zwei Jahre lang. ___ wurde er nie verdächtigt.', o: ['Dabei', 'Dort', 'Darauf'], a: 'Dabei' },
       { q: 'Viele Sprachen sterben aus. ___ ist ein großer Verlust für die Menschheit.', o: ['Dies', 'Dieser', 'Dort'], a: 'Dies' },
       { q: 'Das Museum hatte keine Kameras. ___ war der Diebstahl so leicht.', o: ['Deshalb', 'Trotzdem', 'Damals'], a: 'Deshalb' },
-      { q: 'Die Polizei suchte lange nach dem Bild. Schließlich fand sie ___ in einer Wohnung in Florenz.', o: ['es', 'ihn', 'sie'], a: 'es' }
+      { q: 'Die Polizei suchte lange nach dem Bild. Schließlich fand sie ___ in einem Hotelzimmer in Florenz.', o: ['es', 'ihn', 'sie'], a: 'es' }
     ] },
     { teil: 'C1', titel: 'Sprechen: Was antworten Sie?', anweisung: 'Lesen Sie, was die Person sagt. Welche Antwort passt am besten?', anweisungAr: 'اختر الرد الأنسب.', typ: 'mcq', items: [
       { q: '„Welche Sehenswürdigkeit in deinem Land sollte man unbedingt sehen?“', o: ['Auf jeden Fall die Tempel von Abu Simbel. Besonders beeindruckend ist es, wenn die Sonne morgens aufgeht.', 'Viele.', 'Ich war noch nie im Museum.'], a: 'Auf jeden Fall die Tempel von Abu Simbel. Besonders beeindruckend ist es, wenn die Sonne morgens aufgeht.' },

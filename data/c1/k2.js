@@ -23,7 +23,7 @@ window.UEBUNG = {
     ] },
     { teil: 'B2', titel: 'Grammatik: Redewiedergabe', anweisung: 'Wählen Sie die richtige Form.', anweisungAr: 'نقل الكلام: laut + Dativ/Genitiv، و nach + Dativ (غالبًا بعد الاسم)، و zufolge + Dativ (بعد الاسم)، و wie + الفاعل + الفعل، و Konjunktiv I.', typ: 'select', items: [
       { q: '___ der Studie fühlen sich 60 % der Beschäftigten durch ständige Erreichbarkeit gestresst.', o: ['Laut', 'Zufolge', 'Wie'], a: 'Laut' },
-      { q: 'Dem Experten ___ sollte man abends das Diensthandy ausschalten.', o: ['zufolge', 'laut', 'nach'], a: 'zufolge' },
+      { q: 'Dem Experten ___ sollte man abends das Diensthandy ausschalten.', o: ['zufolge', 'laut', 'wegen'], a: 'zufolge' },
       { q: '___ die Linguistin erklärt, lernen Kinder Sprachen unbewusst.', o: ['Wie', 'Laut', 'Nach'], a: 'Wie' },
       { q: 'Meiner Meinung ___ ist Schlagfertigkeit trainierbar.', o: ['nach', 'zufolge', 'laut'], a: 'nach' },
       { q: 'Die Forscherin betont, Dialekte ___ keineswegs vom Aussterben bedroht. (sein, Plural)', o: ['seien', 'sind', 'wären gewesen'], a: 'seien' },

@@ -21,7 +21,7 @@ window.UEBUNG = {
     ] },
     { titel: 'Grammatik: Indefinitpronomen', anweisung: 'Ergänzen Sie das passende Pronomen.', anweisungAr: 'jemand/niemand/man للأشخاص، و alles/etwas/nichts للأشياء.', typ: 'select', o: ['jemand', 'niemand', 'man', 'alles', 'etwas', 'nichts'], items: [
       { q: 'Kann ___ auf dem Festival Getränke kaufen? – Ja, natürlich.', a: 'man' },
-      { q: 'Hast du ___ für das Picknick? – Ja, ich habe alles eingepackt.', a: 'alles' },
+      { q: 'Hast du wirklich ___ eingepackt? – Ja, ich habe nichts vergessen.', a: 'alles' },
       { q: 'Hallo? Ist da ___? Ich höre Stimmen.', a: 'jemand' },
       { q: 'Ich habe angerufen, aber ___ war zu Hause.', a: 'niemand' },
       { q: 'Willst du ___ essen? Ich habe Hunger.', a: 'etwas' },

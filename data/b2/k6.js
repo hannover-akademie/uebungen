@@ -25,8 +25,8 @@ window.UEBUNG = {
     { teil: 'B2', titel: 'Grammatik: Vorgangs- oder Zustandspassiv?', anweisung: 'Ergänzen Sie wird/werden oder ist/sind.', anweisungAr: 'Vorgangspassiv (werden + Partizip II) = العملية تحدث الآن، و Zustandspassiv (sein + Partizip II) = النتيجة/الحالة بعد انتهاء العملية.', typ: 'select', items: [
       { q: 'Das Paket ___ gerade verpackt. (Vorgang)', o: ['wird', 'ist'], a: 'wird' },
       { q: 'Das Paket ___ schon verpackt. Wir können es abschicken. (Zustand)', o: ['ist', 'wird'], a: 'ist' },
-      { q: 'Tut mir leid, der Laden ___ heute geschlossen.', o: ['ist', 'wird'], a: 'ist' },
-      { q: 'Die Bestellung ___ morgen ausgeliefert.', o: ['wird', 'ist'], a: 'wird' },
+      { q: 'Tut mir leid, der Laden ___ heute den ganzen Tag geschlossen. (Zustand)', o: ['ist', 'wird'], a: 'ist' },
+      { q: 'Die Bestellung ___ gerade vom Fahrer ausgeliefert. (Vorgang)', o: ['wird', 'ist'], a: 'wird' },
       { q: 'Keine Sorge, die Rechnung ___ längst bezahlt.', o: ['ist', 'wird'], a: 'ist' },
       { q: 'Das Formular ___ noch nicht ausgefüllt – kannst du das bitte machen?', o: ['ist', 'wird'], a: 'ist' }
     ] },

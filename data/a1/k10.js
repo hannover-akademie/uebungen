@@ -40,7 +40,7 @@ window.UEBUNG = {
       { q: 'Sie hat in Berlin Medizin ___. (studieren)', a: ['studiert'] },
       { q: 'Ich habe gestern mit meiner Mutter ___. (telefonieren)', a: ['telefoniert'] },
       { q: 'Wir haben die Party ___. (organisieren)', a: ['organisiert'] },
-      { q: 'Er hat die Fotos ___. (fotografieren)', a: ['fotografiert'] }
+      { q: 'Er hat im Urlaub den Hafen ___. (fotografieren)', a: ['fotografiert'] }
     ] },
     { titel: 'haben oder sein?', anweisung: 'Perfekt mit haben oder sein? Wählen Sie.', anweisungAr: 'تُستعمل sein مع أفعال الحركة وتغيّر الحال (fahren, gehen, kommen, aufstehen)، وتُستعمل haben مع سائر الأفعال.', typ: 'select', items: [
       { q: 'Ich ___ gestern nach Hamburg gefahren.', o: ['bin', 'habe'], a: 'bin' },

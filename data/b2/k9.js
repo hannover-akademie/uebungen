@@ -37,13 +37,13 @@ window.UEBUNG = {
       { q: 'Weil er so wütend war, konnte er nicht schlafen.', o: ['Wegen seiner Wut konnte er nicht schlafen.', 'Trotz seiner Wut konnte er nicht schlafen.', 'Bei seiner Wut konnte er schlafen.'], a: 'Wegen seiner Wut konnte er nicht schlafen.' },
       { q: 'Während sie studierte, sang sie in einer Band.', o: ['Während ihres Studiums sang sie in einer Band.', 'Nach ihrem Studium sang sie in einer Band.', 'Bei ihrem Studieren sang sie in einer Band.'], a: 'Während ihres Studiums sang sie in einer Band.' }
     ] },
-    { teil: 'B4', titel: 'Grammatik: Modalpartikeln', anweisung: 'Welche Partikel passt?', anweisungAr: 'أدوات التلطيف: doch (تذكير/تشجيع/استغراب)، ja (أمر معروف/دهشة)، mal (يلطّف الطلب)، denn (فضول في السؤال)، aber (دهشة/تأكيد)، eben/halt (أمر لا يتغير).', typ: 'select', o: ['doch', 'ja', 'mal', 'denn', 'aber', 'eben'], items: [
-      { q: 'Was ist ___ los mit dir? Du siehst so traurig aus. (Interesse in der Frage)', a: 'denn' },
-      { q: 'Das ist ___ eine tolle Überraschung! (Erstaunen)', a: 'ja' },
-      { q: 'Kannst du ___ das Fenster aufmachen? (freundliche Bitte)', a: 'mal' },
-      { q: 'Komm ___ mit ins Konzert, das wird bestimmt schön! (Aufforderung, Überredung)', a: 'doch' },
-      { q: 'Du hast ___ schön gesungen! (Bewunderung)', a: 'aber' },
-      { q: 'So ist das ___ – man kann nicht immer gewinnen. (Resignation)', a: 'eben' }
+    { teil: 'B4', titel: 'Grammatik: Modalpartikeln', anweisung: 'Welche Partikel passt?', anweisungAr: 'أدوات التلطيف: doch (تذكير/تشجيع/استغراب)، ja (أمر معروف/دهشة)، mal (يلطّف الطلب)، denn (فضول في السؤال)، aber (دهشة/تأكيد)، eben/halt (أمر لا يتغير).', typ: 'select', items: [
+      { q: 'Was ist ___ los mit dir? Du siehst so traurig aus. (Interesse in der Frage)', o: ['denn', 'eben', 'mal'], a: 'denn' },
+      { q: 'Das ist ___ eine tolle Überraschung! (Erstaunen)', o: ['ja', 'mal', 'denn'], a: 'ja' },
+      { q: 'Kannst du ___ das Fenster aufmachen? (freundliche Bitte)', o: ['mal', 'eben', 'ja'], a: 'mal' },
+      { q: 'Komm ___ mit ins Konzert, das wird bestimmt schön! (Überredung)', o: ['doch', 'denn', 'eben'], a: 'doch' },
+      { q: 'Du hast ___ schön gesungen! (Bewunderung)', o: ['aber', 'denn', 'mal'], a: 'aber' },
+      { q: 'So ist das ___ – man kann nicht immer gewinnen. (Resignation)', o: ['eben', 'mal', 'denn'], a: 'eben' }
     ] },
     { teil: 'C1', titel: 'Sprechen: Gefühle ausdrücken und reagieren', anweisung: 'Lesen Sie, was die Person sagt. Welche Reaktion passt am besten?', anweisungAr: 'اختر الرد الأنسب للتعبير عن المشاعر أو التفاعل معها.', typ: 'mcq', items: [
       { q: 'Freundin: „Ich habe die Stelle nicht bekommen. Ich bin total enttäuscht.“', o: ['Das tut mir wirklich leid. Ich kann gut verstehen, dass du enttäuscht bist.', 'Na und? Es gibt andere Stellen.', 'Ich habe meine Stelle bekommen.'], a: 'Das tut mir wirklich leid. Ich kann gut verstehen, dass du enttäuscht bist.' },

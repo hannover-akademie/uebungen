@@ -66,7 +66,7 @@ window.UEBUNG = {
       ] }
     ] },
     { titel: 'Redemittel: Auf Informationen reagieren', anweisung: 'Welche Reaktion passt?', anweisungAr: 'اختر الرد المناسب على المعلومة.', typ: 'mcq', items: [
-      { q: 'In Deutschland haben 34 Millionen Menschen ein Haustier.', o: ['Mich hat überrascht, dass es so viele sind.', 'Das kommt nicht mehr vor.', 'Natürlich, das mache ich gern.'], a: 'Mich hat überrascht, dass es so viele sind.' },
+      { q: 'In Deutschland leben über 34 Millionen Haustiere.', o: ['Mich hat überrascht, dass es so viele sind.', 'Das kommt nicht mehr vor.', 'Natürlich, das mache ich gern.'], a: 'Mich hat überrascht, dass es so viele sind.' },
       { q: 'Viele Deutsche feiern im Sommer ein Hoffest mit allen Nachbarn.', o: ['Das ist bei uns ganz anders.', 'Es stört mich, wenn …', 'Könnten Sie mir helfen?'], a: 'Das ist bei uns ganz anders.' },
       { q: 'Hunde müssen in Deutschland Steuern bezahlen.', o: ['Ich habe nicht gewusst, dass es eine Hundesteuer gibt.', 'Verzeihung!', 'Ja, gerne.'], a: 'Ich habe nicht gewusst, dass es eine Hundesteuer gibt.' }
     ] },

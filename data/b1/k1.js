@@ -35,13 +35,13 @@ window.UEBUNG = {
       { q: 'Ich finde es anstrengend, …', o: ['lange im Auto zu sitzen.', 'lange im Auto sitzen.', 'lange zu sitzen im Auto.'], a: 'lange im Auto zu sitzen.' },
       { q: 'Wir haben keine Lust, …', o: ['nach einer Unterkunft zu suchen.', 'nach einer Unterkunft suchen.', 'zu nach einer Unterkunft suchen.'], a: 'nach einer Unterkunft zu suchen.' }
     ] },
-    { titel: 'Grammatik: da, weil oder obwohl?', anweisung: 'Grund oder Gegengrund? Ergänzen Sie.', anweisungAr: 'weil/da للسبب، و obwohl للتعارض (رغم أنّ). وتأتي da غالبًا في أول الجملة.', typ: 'select', o: ['weil', 'da', 'obwohl'], items: [
-      { q: 'Melina gefällt Heringsdorf, ___ die Strände so schön sind.', a: 'weil' },
-      { q: 'Melina hatte schöne Tage in Heringsdorf, ___ das Wetter schlecht war.', a: 'obwohl' },
-      { q: '___ Rothenburg sehr bekannt ist, kommen viele Touristen in die Stadt. (am Satzanfang, Grund)', a: 'da' },
-      { q: 'Viele Touristen kommen nach Rothenburg, ___ die Restaurants teuer sind.', a: 'obwohl' },
-      { q: 'Wir fahren lieber mit dem Zug, ___ das umweltfreundlicher ist.', a: 'weil' },
-      { q: 'Er hatte Heimweh, ___ der Urlaub wunderschön war.', a: 'obwohl' }
+    { titel: 'Grammatik: da, weil oder obwohl?', anweisung: 'Grund oder Gegengrund? Ergänzen Sie.', anweisungAr: 'weil/da للسبب، و obwohl للتعارض (رغم أنّ). وتأتي da غالبًا في أول الجملة.', typ: 'select', items: [
+      { q: 'Melina gefällt Heringsdorf, ___ die Strände so schön sind.', o: ['weil', 'obwohl'], a: 'weil' },
+      { q: 'Melina hatte schöne Tage in Heringsdorf, ___ das Wetter schlecht war.', o: ['obwohl', 'weil'], a: 'obwohl' },
+      { q: '___ Rothenburg sehr bekannt ist, kommen viele Touristen in die Stadt.', o: ['Da', 'Obwohl'], a: 'Da' },
+      { q: 'Viele Touristen kommen nach Rothenburg, ___ die Restaurants teuer sind.', o: ['obwohl', 'da'], a: 'obwohl' },
+      { q: 'Wir fahren lieber mit dem Zug, ___ das umweltfreundlicher ist.', o: ['weil', 'obwohl'], a: 'weil' },
+      { q: 'Er hatte Heimweh, ___ der Urlaub wunderschön war.', o: ['obwohl', 'da'], a: 'obwohl' }
     ] },
     { titel: 'Grammatik: Sätze verbinden', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة: في الجملة الفرعية يأتي الفعل في آخرها، وإذا بدأت بها الجملة جاء فعل الجملة الرئيسية بعد الفاصلة مباشرة.', typ: 'words', items: [
       { q: 'Satz (.)', w: ['obwohl', 'es', 'geregnet', 'hat,', 'waren', 'wir', 'gut gelaunt'], a: ['obwohl es geregnet hat, waren wir gut gelaunt'] },

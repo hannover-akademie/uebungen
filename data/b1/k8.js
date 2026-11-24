@@ -11,7 +11,7 @@ window.UEBUNG = {
       { q: 'Nach dem Unfall musste er sofort in die ___.', a: 'Notaufnahme' },
       { q: 'Die Ärztin hat einen ___ um die Wunde gemacht.', a: 'Verband' },
       { q: 'Welche ___ haben Sie? – Ich habe starke Rückenschmerzen.', a: 'Beschwerden' },
-      { q: 'Ihr Arbeitgeber braucht ab dem dritten Tag eine ___.', a: 'Krankmeldung' }
+      { q: 'Wenn Sie länger als drei Tage krank sind, braucht Ihr Arbeitgeber eine ___.', a: 'Krankmeldung' }
     ] },
     { titel: 'Wortschatz: Körper und Fitness', anweisung: 'Was passt? Wählen Sie.', anweisungAr: 'اختر الإجابة الصحيحة.', typ: 'mcq', items: [
       { q: 'Ich habe mir beim Fußball das Bein …', o: ['gebrochen.', 'erkältet.', 'gestört.'], a: 'gebrochen.' },

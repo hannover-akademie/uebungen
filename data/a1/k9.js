@@ -22,7 +22,7 @@ window.UEBUNG = {
       { q: 'Das Gras ist ___.', a: 'grün' },
       { q: 'Die Tomate ist ___.', a: 'rot' },
       { q: 'Der Himmel ist ___.', a: 'blau' },
-      { q: 'In der Nacht ist es ___.', a: 'schwarz' }
+      { q: 'Kaffee ohne Milch ist ___.', a: 'schwarz' }
     ] },
     { titel: 'Die Wohnung beschreiben', anweisung: 'Was ist das Gegenteil? Ordnen Sie zu.', anweisungAr: 'صِل كل صفة بضدّها.', typ: 'match', items: [
       { q: '', pairs: [
@@ -46,7 +46,7 @@ window.UEBUNG = {
       { q: 'Die Katze schläft ___ Bett. (unter)', o: ['unter dem', 'unter das', 'unter den'], a: 'unter dem' },
       { q: 'Das Regal steht ___ Tür. (neben)', o: ['neben der', 'neben die', 'neben dem'], a: 'neben der' },
       { q: 'Das Bild hängt ___ Sofa. (über)', o: ['über dem', 'über das', 'über den'], a: 'über dem' },
-      { q: 'Der Teppich liegt ___ Tisch und Sofa. (zwischen)', o: ['zwischen dem', 'zwischen den', 'zwischen das'], a: 'zwischen dem' },
+      { q: 'Der Teppich liegt ___ Tisch und dem Sofa. (zwischen)', o: ['zwischen dem', 'zwischen den', 'zwischen das'], a: 'zwischen dem' },
       { q: 'Der Garten ist ___ Haus. (hinter)', o: ['hinter dem', 'hinter das', 'hinter den'], a: 'hinter dem' }
     ] },
     { titel: 'Wo oder wohin?', anweisung: 'Wählen Sie die richtige Form.', anweisungAr: 'الحركة (Wohin) ← Akkusativ، والمكان الثابت (Wo) ← Dativ.', typ: 'select', items: [

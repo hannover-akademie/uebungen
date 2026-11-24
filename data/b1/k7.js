@@ -38,10 +38,10 @@ window.UEBUNG = {
     { titel: 'Grammatik: Temporale Nebensätze', anweisung: 'Ergänzen Sie den passenden Konnektor.', anweisungAr: 'bevor = قبل أن، bis = إلى أن، nachdem = بعد أن، seit/seitdem = منذ أن، während = بينما.', typ: 'select', o: ['bevor', 'bis', 'nachdem', 'seitdem', 'während'], items: [
       { q: 'Sie trinken Kaffee, ___ Julia telefoniert. (zuerst Kaffee, dann Telefon)', a: 'bevor' },
       { q: 'Wir warten, ___ du zurückkommst.', a: 'bis' },
-      { q: '___ Matilda umgezogen war, fühlte sie sich oft einsam.', a: 'nachdem' },
+      { q: '___ Matilda den Brief gelesen hatte, rief sie sofort ihre Freundin an.', a: 'nachdem' },
       { q: '___ du den Job gewechselt hast, bist du ständig erschöpft.', a: 'seitdem' },
       { q: '___ ich aufräume, kochst du für uns. (gleichzeitig)', a: 'während' },
-      { q: 'Er ruft immer an, ___ er zu Besuch kommt.', a: 'bevor' }
+      { q: 'Er ruft immer an, ___ er zu Besuch kommt. (zuerst Anruf, dann Besuch)', a: 'bevor' }
     ] },
     { titel: 'Grammatik: nachdem – die Zeiten', anweisung: 'Welcher Satz ist richtig?', anweisungAr: 'مع nachdem: Präsens في الرئيسية مع Perfekt في الفرعية، أو Präteritum في الرئيسية مع Plusquamperfekt في الفرعية.', typ: 'mcq', items: [
       { q: 'Nachdem sie neue Freunde gefunden hat, …', o: ['gefällt es ihr in Freiburg gut.', 'gefiel es ihr in Freiburg gut.', 'hatte es ihr gefallen.'], a: 'gefällt es ihr in Freiburg gut.' },
@@ -60,8 +60,8 @@ window.UEBUNG = {
       { q: 'An meinem besten Freund ___ ich vor allem seine Ehrlichkeit.', a: 'schätze' },
       { q: 'Für mich ___ Vertrauen eine große Rolle.', a: 'spielt' },
       { q: '___ meinen Kollegen finde ich Pünktlichkeit nicht so wichtig.', a: 'Im Gegensatz zu' },
-      { q: '___ ist für mich, dass man über alles sprechen kann.', a: 'Besonders wichtig' },
-      { q: 'Humor finde ich ___, denn man muss zusammen lachen können.', a: 'am wichtigsten' }
+      { q: '___ ist für mich, dass man über alles sprechen kann.', o: ['Besonders wichtig', 'Im Gegensatz zu', 'spielt'], a: 'Besonders wichtig' },
+      { q: 'Humor finde ich ___, denn man muss zusammen lachen können.', o: ['am wichtigsten', 'schätze', 'spielt'], a: 'am wichtigsten' }
     ] },
     { titel: 'Prüfungstraining – Goethe B1 Lesen Teil 1', anweisung: 'Lesen Sie den Blogeintrag. Richtig oder falsch?', anweisungAr: 'تدريب على امتحان Goethe B1 (القراءة، الجزء 1): اقرأ التدوينة. هل العبارة صحيحة أم خاطئة؟', typ: 'tf',
       text: 'Eine Freundschaft, die alles überstanden hat\nKarin und ich kennen uns seit der ersten Klasse. Damals hatten wir uns im Bus kennengelernt, weil wir beide Angst vor dem ersten Schultag hatten. Nachdem wir die Schule beendet hatten, zog Karin für ihr Studium nach Hamburg, und ich blieb in München. Wir telefonierten zwar oft, aber mit der Zeit verloren wir uns aus den Augen. Zehn Jahre später lief sie mir zufällig auf einem Bahnhof über den Weg. Es war, als ob wir uns erst gestern gesehen hätten! Seitdem treffen wir uns jedes Jahr für ein Wochenende. Natürlich streiten wir uns manchmal, denn Karin ist immer zu spät, und ich bin sehr pünktlich. Aber wir haben gelernt, Kompromisse zu finden.',

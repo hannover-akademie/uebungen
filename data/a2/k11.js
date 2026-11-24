@@ -37,7 +37,7 @@ window.UEBUNG = {
     { titel: 'Grammatik: Verben mit Präposition', anweisung: 'Ergänzen Sie die Präposition.', anweisungAr: 'أكمل بحرف الجر الذي يلازم الفعل.', typ: 'select', o: ['auf', 'an', 'mit', 'über', 'für', 'um', 'von'], items: [
       { q: 'Wir freuen uns ___ den Ausflug am Sonntag.', a: 'auf' },
       { q: 'Er erinnert sich gern ___ seine Kindheit.', a: 'an' },
-      { q: 'Sie spricht oft ___ ihrer Mutter.', a: 'mit' },
+      { q: 'Sie telefoniert jeden Tag ___ ihrer Mutter.', a: 'mit' },
       { q: 'Ich ärgere mich ___ den Stau.', a: 'über' },
       { q: 'Interessierst du dich ___ Sprichwörter?', a: 'für' },
       { q: 'Wer kümmert sich ___ die Kinder?', a: 'um' },

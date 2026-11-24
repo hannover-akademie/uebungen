@@ -11,7 +11,7 @@ window.UEBUNG = {
       { q: 'die Datei am Ende ___', a: 'speichern' }
     ] },
     { titel: 'und, oder, aber', anweisung: 'Ergänzen Sie.', anweisungAr: 'und = و، oder = أو، aber = لكنّ.', typ: 'select', o: ['und', 'oder', 'aber'], items: [
-      { q: 'Ich arbeite im Büro ___ mein Mann arbeitet im Krankenhaus.', a: 'und' },
+      { q: 'Ich arbeite im Büro ___ mein Mann arbeitet auch im Büro.', a: 'und' },
       { q: 'Möchtest du Kaffee ___ Tee?', a: 'oder' },
       { q: 'Der Job ist interessant, ___ ich habe viel Stress.', a: 'aber' },
       { q: 'Wir können heute ___ morgen telefonieren.', a: 'oder' },
@@ -59,7 +59,7 @@ window.UEBUNG = {
     { titel: 'Sätze bauen', anweisung: 'Bauen Sie den Satz.', anweisungAr: 'رتّب الجملة.', typ: 'words', items: [
       { q: 'Aussagesatz (.)', w: ['ich', 'fahre', 'mit dem Fahrrad', 'zur Arbeit'], a: ['ich fahre mit dem Fahrrad zur Arbeit'] },
       { q: 'Aussagesatz (.)', w: ['der Drucker', 'steht', 'neben dem Fenster'], a: ['der Drucker steht neben dem Fenster', 'neben dem Fenster steht der Drucker'] },
-      { q: 'Aussagesatz (.)', w: ['ich', 'habe', 'Zeit', 'aber', 'kein Geld'], a: ['ich habe Zeit aber kein Geld'] }
+      { q: 'Aussagesatz (.)', w: ['ich', 'habe', 'Zeit,', 'aber', 'kein Geld'], a: ['ich habe Zeit, aber kein Geld'] }
     ] },
     { titel: 'Lesen: Ein Blog', anweisung: 'Lesen Sie den Blogbeitrag. Richtig oder falsch?', anweisungAr: 'اقرأ التدوينة. هل العبارة صحيحة أم خاطئة؟', typ: 'tf',
       text: 'Mein Arbeitsalltag – von Tarek\nIch mache ein Praktikum in einer Firma in Frankfurt. Ich fahre jeden Tag mit der S-Bahn zur Arbeit. Um 8 Uhr fahre ich den Computer hoch und lese meine Mails. Mein Büro ist klein, aber hell. Mein Schreibtisch steht neben dem Fenster. Um 12 Uhr mache ich Pause mit meiner Kollegin Anna. Wir essen in der Kantine oder im Park. Am Nachmittag schreibe ich Berichte. Das ist manchmal langweilig, aber ich lerne viel.',

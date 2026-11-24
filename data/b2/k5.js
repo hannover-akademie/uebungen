@@ -22,7 +22,7 @@ window.UEBUNG = {
     ] },
     { teil: 'B2', titel: 'Grammatik: Passiv', anweisung: 'Wählen Sie die richtige Passivform.', anweisungAr: 'المبني للمجهول: werden + Partizip II، والماضي wurde، والتام ist … worden، ومع فعل كيفية: muss … werden. والفاعل بـ von (شخص) أو durch (وسيلة).', typ: 'select', items: [
       { q: 'Die Studie ___ 2020 an der Universität Heidelberg durchgeführt.', o: ['wurde', 'wird worden', 'ist'], a: 'wurde' },
-      { q: 'Inzwischen sind über 3000 Planeten außerhalb unseres Sonnensystems entdeckt ___.', o: ['worden', 'geworden', 'werden'], a: 'worden' },
+      { q: 'Inzwischen sind über 5000 Planeten außerhalb unseres Sonnensystems entdeckt ___.', o: ['worden', 'geworden', 'werden'], a: 'worden' },
       { q: 'Die Ergebnisse müssen noch genau überprüft ___.', o: ['werden', 'worden', 'wurden'], a: 'werden' },
       { q: 'Das Experiment wurde ___ einer jungen Forscherin geleitet.', o: ['von', 'durch', 'mit'], a: 'von' },
       { q: 'Viele Unfälle werden ___ Müdigkeit verursacht.', o: ['durch', 'von', 'aus'], a: 'durch' }

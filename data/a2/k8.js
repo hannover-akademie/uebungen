@@ -46,7 +46,7 @@ window.UEBUNG = {
       { q: 'Was für ___ Kurs machst du? (der Kurs, Akkusativ)', o: ['einen', 'ein', 'einem'], a: 'einen' },
       { q: 'Was für ___ Buch liest du? (das Buch, Akkusativ)', o: ['ein', 'einen', 'eine'], a: 'ein' },
       { q: 'Was für ___ Prüfung hast du morgen? (die Prüfung)', o: ['eine', 'ein', 'einer'], a: 'eine' },
-      { q: 'Mit was für ___ Film ist man am schnellsten fertig? (der Film, Dativ)', o: ['einem', 'einen', 'ein'], a: 'einem' },
+      { q: 'In was für ___ Haus wohnst du? (das Haus, Dativ)', o: ['einem', 'einen', 'ein'], a: 'einem' },
       { q: 'Was für ___ Lehrer ist er? (der Lehrer, Nominativ)', o: ['ein', 'einen', 'eine'], a: 'ein' },
       { q: 'Was für ___ Aufträge machen Ihnen Spaß? (Plural)', o: ['–', 'ein', 'eine'], a: '–' }
     ] },
