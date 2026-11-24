@@ -34,6 +34,53 @@ a { color: var(--navy-2); }
   padding: 10px 16px; background: var(--navy); color: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,.15);
 }
+/* Übungsseiten: dezentes Foto (Neues Rathaus Hannover) hinter der blauen Leiste */
+.topbar:not(.banner) {
+  background: linear-gradient(90deg, rgba(18,53,91,.96) 0%, rgba(18,53,91,.88) 55%, rgba(18,53,91,.72) 100%),
+              url(bg/hannover-rathaus.jpg) center 30% / cover no-repeat, var(--navy);
+}
+
+/* Startseite: großes Banner mit wechselnden Fotos aus Deutschland */
+.topbar.banner {
+  position: relative; display: block; padding: 0; min-height: 250px; overflow: hidden; background: var(--navy);
+}
+.banner .slides, .banner .slide { position: absolute; inset: 0; }
+.banner .slide {
+  background-size: cover; background-position: center; opacity: 0; transform: scale(1.04);
+  transition: opacity 1.6s ease, transform 7s ease;
+}
+.banner .slide.on { opacity: 1; transform: scale(1); }
+.banner .slides::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(18,53,91,.82) 0%, rgba(18,53,91,.55) 45%, rgba(18,53,91,.15) 100%),
+              linear-gradient(180deg, rgba(18,53,91,.25) 0%, rgba(18,53,91,0) 40%, rgba(18,53,91,.45) 100%);
+}
+.banner-in {
+  position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 16px 16px 18px;
+  min-height: 250px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.banner .brand strong { font-size: 22px; text-shadow: 0 1px 4px rgba(0,0,0,.4); }
+.banner .brand small { opacity: .95; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+.banner-text { margin-top: 18px; }
+.banner-text p { margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,.55); }
+.banner .willkommen { font-size: 34px; font-weight: 800; color: #fff; }
+.banner .willkommen::after { content: ''; display: block; width: 90px; height: 5px; margin-top: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, #000 0 33%, #dd0000 33% 66%, #ffcc00 66% 100%); }
+.banner .banner-text .ar { font-size: 20px; color: #fff; margin-top: 8px; text-align: left; }
+.banner .ort {
+  align-self: flex-end; margin-top: 12px; font-size: 13px; color: #fff; background: rgba(0,0,0,.35);
+  padding: 3px 10px; border-radius: 20px;
+}
+@media (max-width: 600px) {
+  .topbar.banner, .banner-in { min-height: 210px; }
+  .banner .willkommen { font-size: 26px; }
+  .banner .banner-text .ar { font-size: 17px; }
+  .banner .brand strong { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .banner .slide { transition: none; transform: none; } }
+.foot .credits { display: block; margin-top: 6px; font-size: 11px; opacity: .75; }
+.foot .credits a { color: inherit; }
+
 .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
 .brand strong { display: block; font-size: 18px; }
 .brand small { display: block; opacity: .8; font-size: 13px; }

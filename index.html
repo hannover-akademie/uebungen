@@ -10,8 +10,21 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand"><img class="logo-img" src="assets/logo.png" alt="Hannover Sprachakademie"><div><strong>Hannover Sprachakademie</strong><small>Deutsch lernen · Übungen nach jeder Stunde</small></div></div>
+  <header class="topbar banner">
+    <div class="slides" aria-hidden="true">
+      <div class="slide on" style="background-image:url(assets/bg/hannover-rathaus.jpg)" data-ort="Hannover · Neues Rathaus"></div>
+      <div class="slide" style="background-image:url(assets/bg/berlin.jpg); background-position:center 22%" data-ort="Berlin · Brandenburger Tor"></div>
+      <div class="slide" style="background-image:url(assets/bg/hannover-uni.jpg); background-position:center 35%" data-ort="Hannover · Leibniz Universität"></div>
+      <div class="slide" style="background-image:url(assets/bg/neuschwanstein.jpg); background-position:center 40%" data-ort="Bayern · Schloss Neuschwanstein"></div>
+    </div>
+    <div class="banner-in">
+      <div class="brand"><img class="logo-img" src="assets/logo.png" alt="Hannover Sprachakademie"><div><strong>Hannover Sprachakademie</strong><small>Deutsch lernen · Übungen nach jeder Stunde</small></div></div>
+      <div class="banner-text">
+        <p class="willkommen">Herzlich willkommen!</p>
+        <p class="ar">أهلًا بكم في عالم اللغة الألمانية</p>
+      </div>
+      <span class="ort" id="ort">Hannover · Neues Rathaus</span>
+    </div>
   </header>
   <main class="wrap">
     <section class="hero">
@@ -20,9 +33,25 @@
     </section>
     <div id="kurse"></div>
   </main>
-  <footer class="foot">© Hannover Sprachakademie</footer>
+  <footer class="foot">© Hannover Sprachakademie
+    <small class="credits">Fotos (Wikimedia Commons):
+      <a href="https://commons.wikimedia.org/wiki/File:Hannover_Rathaus_and_Maschteich,_Germany_-_20100525.jpg" target="_blank" rel="noopener">Akshathrajan</a>, CC BY-SA 3.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Brandenburger_Tor_abends.jpg" target="_blank" rel="noopener">Thomas Wolf, www.foto-tw.de</a>, CC BY-SA 3.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Gottfried_Wilhelm_Leibniz_Universit%C3%A4t_Hannover_IMG_5203.jpg" target="_blank" rel="noopener">Losch</a>, CC BY-SA 3.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_2024.jpg" target="_blank" rel="noopener">Wilfredor</a>, CC0 ·
+      zugeschnitten und verkleinert</small>
+  </footer>
   <script src="config.js"></script>
   <script>
+    // Bildwechsel im Kopfbereich (alle 6 Sekunden)
+    (function () {
+      var s = document.querySelectorAll('.slides .slide'), ort = document.getElementById('ort'), i = 0;
+      if (!s.length || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+      setInterval(function () {
+        s[i].classList.remove('on'); i = (i + 1) % s.length; s[i].classList.add('on');
+        ort.textContent = s[i].getAttribute('data-ort');
+      }, 6000);
+    })();
     (function () {
       var box = document.getElementById('kurse');
       HA_CONFIG.kurse.forEach(function (k) {
