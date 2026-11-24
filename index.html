@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/logo.png">
+  <title>Hannover Sprachakademie – Übungen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img class="logo-img" src="assets/logo.png" alt="Hannover Sprachakademie"><div><strong>Hannover Sprachakademie</strong><small>Deutsch lernen · Übungen nach jeder Stunde</small></div></div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Übungen &amp; Hausaufgaben</h1>
+      <p class="ar">اختر الكتاب والدرس، واكتب اسمك، ثم حلّ التمارين. ستعرف نتيجتك فورًا، وتصل إجاباتك إلى المحاضر.</p>
+    </section>
+    <div id="kurse"></div>
+  </main>
+  <footer class="foot">© Hannover Sprachakademie</footer>
+  <script src="config.js"></script>
+  <script>
+    (function () {
+      var box = document.getElementById('kurse');
+      HA_CONFIG.kurse.forEach(function (k) {
+        var sec = document.createElement('section'); sec.className = 'card';
+        var h = document.createElement('h2'); h.textContent = k.name; sec.appendChild(h);
+        var grid = document.createElement('div'); grid.className = 'kap-grid';
+        k.kapitel.forEach(function (c) {
+          var a = document.createElement(c.fertig ? 'a' : 'div');
+          a.className = 'kap' + (c.fertig ? '' : ' soon');
+          if (c.fertig) a.href = 'uebung.html?kurs=' + k.id + '&k=' + c.nr;
+          a.innerHTML = '<span class="nr">' + c.nr + '</span><span class="t"></span><span class="s">' + (c.fertig ? 'Jetzt üben →' : 'bald') + '</span>';
+          a.querySelector('.t').textContent = 'Kapitel ' + c.nr + ': ' + c.titel;
+          grid.appendChild(a);
+        });
+        sec.appendChild(grid);
+        if (k.final) {
+          var f = document.createElement(k.final.fertig ? 'a' : 'div');
+          f.className = 'final-card' + (k.final.fertig ? '' : ' soon');
+          if (k.final.fertig) f.href = 'uebung.html?kurs=' + k.id + '&k=final';
+          f.innerHTML = '<span class="trophy">🏆</span><span><strong></strong><small></small><em class="ar">امتحان نهائي للمستوى كاملًا: مفردات وقواعد وقراءة وكتابة</em></span><span class="go">' + (k.final.fertig ? 'Starten →' : 'bald') + '</span>';
+          f.querySelector('strong').textContent = k.final.titel;
+          f.querySelector('small').textContent = k.final.text || '';
+          sec.appendChild(f);
+        }
+        box.appendChild(sec);
+      });
+    })();
+  </script>
+</body>
+</html>
