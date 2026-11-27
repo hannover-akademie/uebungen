@@ -1,6 +1,7 @@
 /* Hannover Sprachakademie – Übungsseite
-   Typen: mcq, tf, select, gap, match, order, words, write
-   Daten: data/<kurs>/k<n>.js setzt window.UEBUNG */
+   Typen: mcq, tf, select, gap, match, order, words, write (ein Item darf mit typ den Typ des Teils überschreiben)
+   Daten: data/<kurs>/k<n>.js setzt window.UEBUNG
+   Hören: data/<kurs>/hoeren.js setzt window.HOEREN = { k1: [Teile], …, final: [Teile] }; die Teile werden vor dem Schreiben eingefügt */
 (function () {
   'use strict';
   var CFG = window.HA_CONFIG || {};
@@ -23,11 +24,21 @@
   function qid(t, i) { return t + '.' + i; }
 
   // ---------- Daten laden ----------
-  var s = document.createElement('script');
-  s.src = 'data/' + kursId + '/' + (kapNr === 'final' ? 'final' : 'k' + kapNr) + '.js';
-  s.onload = function () { U = window.UEBUNG; if (!U) return fail(); init(); };
-  s.onerror = fail;
-  document.body.appendChild(s);
+  function loadScript(src, ok, bad) { var s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = bad; document.body.appendChild(s); }
+  loadScript('data/' + kursId + '/' + (kapNr === 'final' ? 'final' : 'k' + kapNr) + '.js', function () {
+    U = window.UEBUNG; if (!U) return fail();
+    // Hören-Teile des Niveaus (data/<kurs>/hoeren.js) werden vor dem Schreiben eingefügt
+    loadScript('data/' + kursId + '/hoeren.js', function () { addHoeren(); init(); }, init);
+  }, fail);
+  function addHoeren() {
+    var H = window.HOEREN, key = kapNr === 'final' ? 'final' : 'k' + kapNr;
+    if (!H || !H[key] || U._hoeren) return;
+    var pos = -1;
+    U.teile.forEach(function (t, i) { if (pos < 0 && /Schreiben/.test((t.teil || '') + ' ' + t.titel)) pos = i; });
+    if (pos < 0) pos = U.teile.length;
+    Array.prototype.splice.apply(U.teile, [pos, 0].concat(H[key]));
+    U._hoeren = true;
+  }
   function fail() { app.innerHTML = ''; var c = el('div', 'card'); c.appendChild(el('h2', null, 'Diese Übung gibt es noch nicht.')); c.appendChild(el('p', 'ar', 'هذا التمرين غير متاح بعد.')); var a = el('a', 'btn', 'Zur Startseite'); a.href = 'index.html'; c.appendChild(a); app.appendChild(c); }
 
   function label() { return U.label || ('Kapitel ' + U.kapitel); }
@@ -36,6 +47,7 @@
 
   // ---------- Start ----------
   function init() {
+    if (U._hoeren) KEY += '_h';   // neue Fassung mit Hören: alte Entwürfe passen nicht mehr
     document.getElementById('kursname').textContent = U.kurs + ' · ' + label();
     document.title = 'Hannover Sprachakademie – ' + U.kurs + ' ' + label();
     var old = load();
@@ -73,6 +85,7 @@
   var renderers = {};
 
   function renderExercises() {
+    stopAudio();
     app.innerHTML = '';
     var head = el('section', 'card');
     head.appendChild(el('h2', null, full()));
@@ -87,10 +100,13 @@
       var h = el('h2'); h.appendChild(el('span', 'badge', (t.teil || ('Übung ' + (ti + 1))))); h.appendChild(document.createTextNode(' ' + t.titel)); c.appendChild(h);
       if (t.anweisung) c.appendChild(el('p', 'anw', t.anweisung));
       if (t.anweisungAr) c.appendChild(el('p', 'ar anw-ar', t.anweisungAr));
+      if (t.audio) c.appendChild(player('p' + ti, t, t, t.audioTitel || ''));
       if (t.text) c.appendChild(el('div', 'lesetext', t.text));
+      var tn = 0;
       t.items.forEach(function (it, ii) {
+        if (it.audio) c.appendChild(player('p' + ti + '.' + ii, t, it, it.audioTitel || ('Text ' + (++tn))));
         var box = el('div', 'item'); box.id = 'it-' + qid(ti, ii);
-        renderers[t.typ](box, t, it, qid(ti, ii), ii);
+        renderers[it.typ || t.typ](box, t, it, qid(ti, ii), ii);
         c.appendChild(box);
       });
       app.appendChild(c);
@@ -237,9 +253,100 @@
     count(); box.appendChild(ta); box.appendChild(wc);
   };
 
+  // ---------- Hören (Sprachausgabe des Browsers, wie im Einstufungstest) ----------
+  // Teil oder Aufgabe mit audio: [{ s: 'w'|'m'|'w2'|'m2', n: 'Name (optional)', t: 'Text' }], plays: 1 oder 2 (wie in der Prüfung), rate: Tempo
+  var synth = window.speechSynthesis;
+  function deVoices() { if (!synth) return []; return synth.getVoices().filter(function (v) { return /^de([-_]|$)/i.test(v.lang); }); }
+  function rank(v) { return (/natural|online|neural|premium|enhanced/i.test(v.name) ? 0 : 1) + (/de[-_]DE/i.test(v.lang) ? 0 : 0.5); }
+  function pickVoices() {
+    var vs = deVoices().sort(function (a, b) { return rank(a) - rank(b); });
+    if (!vs.length) return null;
+    var W = /katja|hedda|anna|petra|helena|marlene|vicki|amala|seraphina|elke|gisela|louisa|maja|tanja|ingrid|klara|female|weiblich|google deutsch/i;
+    var M = /stefan|conrad|markus|yannick|hans|killian|florian|ralf|bernd|kasper|viktor|christoph|male|männlich/i;
+    var ws = vs.filter(function (v) { return W.test(v.name) && !M.test(v.name); }), ms = vs.filter(function (v) { return M.test(v.name); });
+    var w = ws[0] || vs[0], m = ms[0] || null;
+    return {
+      w: { v: w, pitch: 1.05 },
+      w2: ws[1] ? { v: ws[1], pitch: 1 } : { v: w, pitch: 1.3 },
+      m: m ? { v: m, pitch: 1 } : { v: w, pitch: 0.75 },
+      m2: ms[1] ? { v: ms[1], pitch: 1 } : (m ? { v: m, pitch: 0.85 } : { v: w, pitch: 0.6 })
+    };
+  }
+  var lauf = 0;   // jede Wiedergabe hat eine Nummer; eine neue beendet die alte
+  function stopAudio() { lauf++; try { if (synth) synth.cancel(); } catch (e) {} }
+  function sentences(t) { return String(t).match(/[^.!?…:]+[.!?…:]*\s*/g) || [t]; }
+  var SPRECHER = { w: 'Frau', w2: 'Frau 2', m: 'Mann', m2: 'Mann 2' };
+  function transcript(src) {
+    return src.audio.map(function (l) { return (src.audio.length > 1 || l.n ? (l.n || SPRECHER[l.s] || '') + ': ' : '') + l.t; }).join('\n');
+  }
+  function player(pid, t, src, titel) {
+    state.plays = state.plays || {};
+    var MAX = state.submitted ? 99 : (src.plays || t.plays || 2);
+    var box = el('div', 'player');
+    if (titel) box.appendChild(el('strong', 'player-titel', titel));
+    var btn = el('button', 'btn', ''); btn.type = 'button';
+    var info = el('span', 'player-info');
+    var note = el('div', 'ar player-note');
+    box.appendChild(btn); box.appendChild(info); box.appendChild(note);
+    function used() { return state.plays[pid] || 0; }
+    function label(playing) {
+      var rest = MAX - used();
+      btn.disabled = playing || rest <= 0;
+      btn.textContent = playing ? '🔊 Läuft …' : (rest > 0 ? '▶ Abspielen' : '✓ Gehört');
+      if (state.submitted) { info.textContent = ''; return; }
+      info.textContent = playing ? '' : (rest > 0 ? (MAX === 1 && rest === 1 ? 'Sie hören den Text einmal. · ستسمع النص مرة واحدة فقط.' : 'noch ' + rest + '× · ' + (rest === 2 ? 'متبقٍّ مرتان' : 'متبقٍّ مرة واحدة')) : 'Keine Wiederholung mehr · انتهى عدد مرات الاستماع');
+    }
+    function showText() { var tx = el('div', 'lesetext transkript'); tx.textContent = transcript(src); box.appendChild(tx); }
+    function noVoice() {
+      if (state.submitted) return;
+      note.textContent = 'لا يتوفر على جهازك صوت ألماني. جرّب متصفح Chrome أو Edge، أو افتح التمرين من الهاتف. إذا لم يكن ذلك ممكنًا، فاضغط على الزر لقراءة النص بدلًا من سماعه.';
+      var show = el('button', 'small-btn', 'Text anzeigen · اعرض النص'); show.type = 'button';
+      show.onclick = function () { showText(); show.remove(); state.plays[pid] = MAX; save(); label(false); };
+      note.appendChild(document.createElement('br')); note.appendChild(show);
+    }
+    btn.onclick = function () {
+      if (!synth) { noVoice(); return; }
+      var vo = pickVoices();
+      if (!vo) {
+        // Stimmenliste noch leer (häufig auf Android beim ersten Tippen): mit lang = de-DE versuchen
+        if (synth.getVoices().length) { noVoice(); return; }
+        var d = { v: null, pitch: 1.05 };
+        vo = { w: d, w2: { v: null, pitch: 1.3 }, m: { v: null, pitch: 0.75 }, m2: { v: null, pitch: 0.6 } };
+      }
+      stopAudio();
+      var run = lauf;
+      if (!state.submitted) { state.plays[pid] = used() + 1; save(); }
+      label(true);
+      var queue = [];
+      src.audio.forEach(function (l, li) {
+        var sp = vo[l.s] || vo.w;
+        sentences(l.t).forEach(function (s) { queue.push({ text: s.trim(), sp: sp, pause: false }); });
+        if (li < src.audio.length - 1) queue[queue.length - 1].pause = true;
+      });
+      var i = 0;
+      (function next() {
+        if (i >= queue.length || run !== lauf) { label(false); return; }
+        var q = queue[i++];
+        var u = new SpeechSynthesisUtterance(q.text);
+        u.lang = q.sp.v ? q.sp.v.lang : 'de-DE'; if (q.sp.v) u.voice = q.sp.v; u.pitch = q.sp.pitch; u.rate = src.rate || t.rate || U.rate || 1;
+        u.onend = function () { setTimeout(next, q.pause ? 450 : 60); };
+        u.onerror = function () { setTimeout(next, 60); };
+        synth.speak(u);
+      })();
+    };
+    if (synth && !deVoices().length) { synth.onvoiceschanged = function () { label(false); }; }
+    label(false);
+    if (state.submitted) {
+      var tb = el('button', 'small-btn', 'Transkript · نص الاستماع'); tb.type = 'button';
+      tb.onclick = function () { showText(); tb.remove(); };
+      box.appendChild(tb);
+    }
+    return box;
+  }
+
   // ---------- Bewertung ----------
   function check(t, it, v) {
-    switch (t.typ) {
+    switch (it.typ || t.typ) {
       case 'mcq': return v === it.a;
       case 'tf': return v === (it.a ? 'Richtig' : 'Falsch');
       case 'select': return v === it.a;
@@ -251,7 +358,7 @@
     }
   }
   function solutionText(t, it) {
-    switch (t.typ) {
+    switch (it.typ || t.typ) {
       case 'tf': return it.a ? 'Richtig' : 'Falsch';
       case 'gap': return Array.isArray(it.a) ? it.a[0] : it.a;
       case 'match': return it.pairs.map(function (p) { return p[0] + ' → ' + p[1]; }).join(' | ');

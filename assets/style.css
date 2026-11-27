@@ -213,6 +213,9 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .player-info { font-size: 14px; color: var(--muted); }
 .player-note { flex-basis: 100%; font-size: 14px; }
 .player .lesetext { flex-basis: 100%; margin: 0; }
+.player-titel { flex-basis: 100%; color: var(--navy); }
+.teil .player { margin-top: 14px; }
+.player .transkript { white-space: pre-line; font-size: 15px; }
 .spinner { width: 46px; height: 46px; margin: 18px auto; border: 5px solid var(--line); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .lvl-box { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0 16px; }
