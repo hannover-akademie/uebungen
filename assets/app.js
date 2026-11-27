@@ -389,7 +389,7 @@
     U.teile.forEach(function (t, ti) {
       t.items.forEach(function (it, ii) {
         var id = qid(ti, ii), v = state.answers[id], r = check(t, it, v);
-        if (r === null) { freitext.push({ teil: ti + 1, nr: ii + 1, titel: (t.teil ? t.teil + ' ' : '') + (t.titel || ''), text: v || '' }); details.push({ id: id, status: 'manual' }); return; }
+        if (r === null) { freitext.push({ id: id, teil: ti + 1, nr: ii + 1, titel: (t.teil ? t.teil + ' ' : '') + (t.titel || ''), text: v || '' }); details.push({ id: id, status: 'manual' }); return; }
         max++; if (r) pts++;
         details.push({ id: id, status: r ? 'ok' : 'bad', antwort: answerText(t, v), loesung: r ? '' : String(solutionText(t, it)) });
       });
@@ -397,7 +397,57 @@
     var result = { punkte: pts, max: max, prozent: Math.round(pts / max * 100), details: details, freitext: freitext, zeit: new Date().toISOString(), dauerMin: Math.round((Date.now() - state.start) / 60000), gesendet: false };
     state.submitted = true; state.result = result; save();
     renderExercises(); showResult(result, false);
-    send(result);
+    kiKorrektur(result);   // korrigiert die Schreibteile mit KI und sendet danach alles an die Lehrkraft
+  }
+
+  // ---------- KI-Korrektur der Schreibteile (Apps Script → Gemini, action 'korrektur') ----------
+  function zielNiveau() { var m = String(U.kurs || '').match(/\b(A1|A2|B1|B2|C1|C2)\b/); return m ? m[1] : 'B1'; }
+  function korrigieren(f) {
+    var p = f.id.split('.'), t = U.teile[+p[0]], it = t.items[+p[1]];
+    var aufgabe = (t.titel || '') + '\n' + (t.anweisung || '') + (t.text ? '\n' + t.text : '') + (it.q ? '\n' + it.q : '') + (it.min ? '\n(Mindestens ca. ' + it.min + ' Wörter.)' : '');
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 120000);
+    return fetch(CFG.apiUrl, { method: 'POST', body: JSON.stringify({ action: 'korrektur', kontext: 'Kursabschlusstest (' + U.kurs + ', ' + label() + ')', aufgabe: aufgabe, ziel: zielNiveau(), text: f.text }), signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { clearTimeout(timer); return j && j.ok && j.k ? { ok: true, k: j.k } : { ok: false, message: (j && j.message) || 'Fehler' }; })
+      .catch(function () { clearTimeout(timer); return { ok: false, message: 'Netzwerk' }; });
+  }
+  function kiKorrektur(res) {
+    var offen = (res.freitext || []).filter(function (f) { return String(f.text || '').trim().split(/\s+/).length >= 3; });
+    if (state.practice || !CFG.apiUrl || !offen.length) { send(res); return; }
+    res.korr = res.korr || {};
+    var st = document.getElementById('sendstate'); if (st) { st.className = 'send wait'; st.textContent = 'Ihre Texte werden von der KI korrigiert … bitte warten (bis zu 1 Minute). · يصحّح الذكاء الاصطناعي نصوصك الآن… انتظر قليلًا.'; }
+    offen.forEach(function (f) { var b = document.getElementById('it-' + f.id); if (b) { var w = el('div', 'fb korr-wait', '⏳ KI-Korrektur läuft … · جارٍ التصحيح…'); w.id = 'kw-' + f.id; b.appendChild(w); } });
+    Promise.all(offen.map(function (f) {
+      return korrigieren(f).then(function (r) { res.korr[f.id] = r; save(); zeigeKorrektur(f.id, r); });
+    })).then(function () { send(res); }, function () { send(res); });
+  }
+  function zeigeKorrektur(id, kk) {
+    var box = document.getElementById('it-' + id); if (!box) return;
+    var w = document.getElementById('kw-' + id); if (w) w.remove();
+    var s = el('div', 'korr'); s.id = 'ki-' + id;
+    if (!kk || !kk.ok) { s.appendChild(el('p', 'ar', 'لم يتوفر التصحيح الآلي الآن، وسيصحّح المحاضر نصك بنفسه.')); box.appendChild(s); return; }
+    var K = kk.k;
+    s.appendChild(el('p', 'anw', '🤖 KI-Korrektur · التصحيح الآلي'));
+    var lvl = el('div', 'korr-lvl'); lvl.appendChild(el('span', null, 'Punkte: ')); lvl.appendChild(el('strong', null, (K.punkte != null ? K.punkte : '–') + ' / 10'));
+    lvl.appendChild(el('span', null, '  ·  Niveau des Textes: ')); lvl.appendChild(el('strong', null, K.niveau || '–')); s.appendChild(lvl);
+    if (K.inhalt_ar) s.appendChild(el('p', 'ar', '📋 ' + K.inhalt_ar));
+    if (K.lob_ar) s.appendChild(el('p', 'ar korr-lob', '👍 ' + K.lob_ar));
+    var fl = Array.isArray(K.fehler) ? K.fehler : [];
+    if (fl.length) {
+      s.appendChild(el('p', 'anw', 'Fehler und Korrekturen · الأخطاء وتصحيحها'));
+      var ul = el('ul', 'korr-list');
+      fl.forEach(function (f) {
+        var li = el('li'), l1 = el('div');
+        l1.appendChild(el('del', null, f.falsch || '')); l1.appendChild(document.createTextNode(' → ')); l1.appendChild(el('ins', null, f.richtig || ''));
+        li.appendChild(l1); if (f.erklaerung_ar) li.appendChild(el('div', 'ar', f.erklaerung_ar)); ul.appendChild(li);
+      });
+      s.appendChild(ul);
+    } else s.appendChild(el('p', 'korr-lob', '✓ Keine Fehler gefunden. · لم يُعثر على أخطاء.'));
+    if (K.korrigiert) { s.appendChild(el('p', 'anw', 'Korrigierte Fassung · النص بعد التصحيح')); s.appendChild(el('div', 'muster', K.korrigiert)); }
+    if (K.tipp_ar) s.appendChild(el('p', 'ar', '💡 ' + K.tipp_ar));
+    s.appendChild(el('p', 'wc', 'Automatische Korrektur durch KI – sie kann Fehler enthalten. Ihre Lehrkraft sieht Ihren Text ebenfalls. · هذا تصحيح آلي وقد يخطئ، والمحاضر يطّلع على نصك أيضًا.'));
+    var muster = box.querySelector('.muster'); box.insertBefore(s, muster || null);
   }
 
   function showResult(res, fromStorage) {
@@ -432,6 +482,9 @@
     row.appendChild(again); row.appendChild(home); c.appendChild(row);
     app.insertBefore(c, app.children[1] || null);
     setSendState(res);
+    if (res.korr) Object.keys(res.korr).forEach(function (id) { zeigeKorrektur(id, res.korr[id]); });
+    // Seite wurde während der Korrektur geschlossen: beim nächsten Öffnen automatisch nachsenden
+    if (fromStorage && !res.gesendet && !state.practice && CFG.apiUrl) send(res);
     if (!fromStorage) window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -454,7 +507,11 @@
       akademie: CFG.akademie, kurs: U.kurs, kapitel: U.kapitel, titel: U.titel, name: state.name,
       punkte: res.punkte, max: res.max, prozent: res.prozent, dauerMin: res.dauerMin, zeit: res.zeit,
       fehler: fehler.join('\n'),
-      freitext: res.freitext.map(function (f) { return (f.titel ? '【' + f.titel + '】\n' : 'Ü' + f.teil + '.' + f.nr + ': ') + (f.text || '(leer)'); }).join('\n\n')
+      freitext: res.freitext.map(function (f) {
+        var kk = res.korr && f.id && res.korr[f.id], ki = '';
+        if (kk && kk.ok) ki = '\n[KI: ' + (kk.k.punkte != null ? kk.k.punkte : '?') + '/10 · Niveau ' + (kk.k.niveau || '?') + (Array.isArray(kk.k.fehler) ? ' · ' + kk.k.fehler.length + ' Fehler' : '') + ']';
+        return (f.titel ? '【' + f.titel + '】\n' : 'Ü' + f.teil + '.' + f.nr + ': ') + (f.text || '(leer)') + ki;
+      }).join('\n\n')
     };
     fetch(CFG.apiUrl, { method: 'POST', body: JSON.stringify(payload) })
       .then(function (r) { return r.json(); })

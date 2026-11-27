@@ -237,6 +237,8 @@ textarea { width: 100%; min-height: 150px; resize: vertical; }
 .anmelden .btn { margin: 6px; }
 .btn.wa { background: #25d366; color: #fff; font-size: 18px; }
 .btn.wa:hover { background: #1ebe5a; }
+.item .korr { margin-top: 12px; padding: 12px 14px; background: #f3f7fd; border: 1px solid #d5e2f3; border-radius: 10px; }
+.korr-wait { color: var(--navy); }
 .korr-lvl { font-size: 18px; margin: 8px 0; }
 .korr-lvl strong { color: var(--navy); font-size: 22px; }
 .korr-lob { color: var(--ok); }
