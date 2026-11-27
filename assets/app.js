@@ -389,7 +389,7 @@
     U.teile.forEach(function (t, ti) {
       t.items.forEach(function (it, ii) {
         var id = qid(ti, ii), v = state.answers[id], r = check(t, it, v);
-        if (r === null) { freitext.push({ teil: ti + 1, nr: ii + 1, text: v || '' }); details.push({ id: id, status: 'manual' }); return; }
+        if (r === null) { freitext.push({ teil: ti + 1, nr: ii + 1, titel: (t.teil ? t.teil + ' ' : '') + (t.titel || ''), text: v || '' }); details.push({ id: id, status: 'manual' }); return; }
         max++; if (r) pts++;
         details.push({ id: id, status: r ? 'ok' : 'bad', antwort: answerText(t, v), loesung: r ? '' : String(solutionText(t, it)) });
       });
@@ -454,7 +454,7 @@
       akademie: CFG.akademie, kurs: U.kurs, kapitel: U.kapitel, titel: U.titel, name: state.name,
       punkte: res.punkte, max: res.max, prozent: res.prozent, dauerMin: res.dauerMin, zeit: res.zeit,
       fehler: fehler.join('\n'),
-      freitext: res.freitext.map(function (f) { return 'Ü' + f.teil + '.' + f.nr + ': ' + f.text; }).join('\n\n')
+      freitext: res.freitext.map(function (f) { return (f.titel ? '【' + f.titel + '】\n' : 'Ü' + f.teil + '.' + f.nr + ': ') + (f.text || '(leer)'); }).join('\n\n')
     };
     fetch(CFG.apiUrl, { method: 'POST', body: JSON.stringify(payload) })
       .then(function (r) { return r.json(); })
