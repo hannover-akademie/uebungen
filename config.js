@@ -3,6 +3,9 @@
 window.HA_CONFIG = {
   akademie: 'Hannover Sprachakademie',
   apiUrl: 'https://script.google.com/macros/s/AKfycbxHLXh0ZC-odt3pExGLlj1qxJBTYPAlWupx0b5GbgJsHgsiD5hbH2jaLdyCrnB8shrH/exec',
+  // Einstufungstest: WhatsApp-Nummer für die Anmeldung (international, ohne + und ohne 00) und optional ein Anmeldeformular
+  whatsapp: '201118833314',
+  anmeldeUrl: '',
   kurse: [
     {
       id: 'a1',
