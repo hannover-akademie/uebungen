@@ -53,6 +53,8 @@
       'ستسمع مقابلة مع خبير مرتين. اقرأ الأسئلة أولًا، ثم أجب عنها أثناء الاستماع.' + KURZ_AR, items);
   }
 
+  function nr(t, n) { t.teil = 'C' + n; return t; }   // Finaltest: Teile C1–C4
+
   window.HOEREN = {
     // ------------------------------------------------ Kapitel 1: Alltägliches (Vereine heute)
     k1: [goethe1([
@@ -280,6 +282,86 @@
       { q: 'Lukas findet die Forschungsergebnisse beruhigend.', a: false },
       { q: 'Laut der Dozentin sind die meisten Erinnerungen im Kern richtig.', a: true },
       { q: 'Die Polizei verwendet heute noch dieselben Befragungstechniken wie früher.', a: false }
-    ])]
+    ])],
+
+    // ------------------------------------------------ Finaltest C1: Goethe C1 Teil 1 + 2, telc C1 Hochschule Teil 2 + 3
+    final: [
+      nr(goethe1([
+        { s: 'w', n: 'Frau Peters', t: 'Studierendenwerk Göttingen, Abteilung Wohnen, Peters, guten Tag.' },
+        { s: 'm', n: 'Youssef Adel', t: 'Guten Tag, hier spricht Youssef Adel. Ich beginne im Oktober mein Masterstudium und habe mich für einen Platz im Wohnheim beworben. Ich wollte fragen, wie der Stand ist.' },
+        { s: 'w', n: 'Frau Peters', t: 'Einen Moment bitte, ich schaue nach. Ja, Herr Adel, Sie stehen auf unserer Warteliste, im Moment auf Platz siebzehn. Erfahrungsgemäß werden im September noch viele Zimmer frei. Ihre Chancen sind also gar nicht schlecht.' },
+        { s: 'm', n: 'Youssef Adel', t: 'Das freut mich. Was kostet denn so ein Zimmer?' },
+        { s: 'w', n: 'Frau Peters', t: 'Das hängt vom Wohnheim ab. Ein Einzelzimmer mit Gemeinschaftsküche kostet zwischen dreihundert und dreihundertachtzig Euro im Monat, einschließlich Nebenkosten und Internet.' },
+        { s: 'm', n: 'Youssef Adel', t: 'Muss ich eine Kaution bezahlen?' },
+        { s: 'w', n: 'Frau Peters', t: 'Ja, die Kaution beträgt zwei Monatsmieten. Sie wird fällig, sobald Sie den Mietvertrag unterschreiben.' },
+        { s: 'm', n: 'Youssef Adel', t: 'Und wie viel Zeit habe ich, wenn mir ein Zimmer angeboten wird?' },
+        { s: 'w', n: 'Frau Peters', t: 'Sie bekommen dann eine E-Mail und haben drei Tage Zeit, das Angebot anzunehmen. Wenn Sie sich nicht melden, geht das Zimmer an den Nächsten auf der Liste. Kontrollieren Sie deshalb bitte regelmäßig auch Ihren Spam-Ordner.' },
+        { s: 'm', n: 'Youssef Adel', t: 'Gut zu wissen. Im September bin ich noch in Kairo. Kann ich den Vertrag auch aus dem Ausland unterschreiben?' },
+        { s: 'w', n: 'Frau Peters', t: 'Ja, das geht digital. Bei der Schlüsselübergabe müssen Sie allerdings Ihren Reisepass und Ihre Immatrikulationsbescheinigung vorlegen.' },
+        { s: 'm', n: 'Youssef Adel', t: 'Vielen Dank, Frau Peters.' }
+      ], [
+        { q: 'Aktueller Platz auf der Warteliste: Nr. ___', a: '17', kw: ['17', 'siebzehn'] },
+        { q: 'Viele Zimmer werden noch frei im ___', a: 'September', kw: ['september'] },
+        { q: 'Miete für ein Einzelzimmer: höchstens ___ Euro im Monat', a: '380', kw: ['380', 'dreihundertachtzig'] },
+        { q: 'Kaution: ___ Monatsmieten', a: 'zwei', kw: ['2', 'zwei'] },
+        { q: 'Frist für die Annahme eines Angebots: ___ Tage', a: 'drei', kw: ['3', 'drei'] },
+        { q: 'Regelmäßig kontrollieren: den ___', a: 'Spam-Ordner', kw: ['spam'] },
+        { q: 'Bei der Schlüsselübergabe vorlegen: Reisepass und ___', a: 'Immatrikulationsbescheinigung', kw: ['immatrikulation', 'studienbescheinigung', 'einschreibung'] }
+      ]), 1),
+      nr(goethe2([
+        { s: 'm', n: 'Moderator', t: 'In unserer Sendung „Literatur im Gespräch“ begrüße ich heute die Übersetzerin Hanna Berger, die seit über zwanzig Jahren arabische Romane ins Deutsche überträgt. Frau Berger, wie sind Sie zu dieser Sprache gekommen?' },
+        { s: 'w', n: 'Hanna Berger', t: 'Eher durch Zufall. Eigentlich wollte ich Archäologin werden und bin nach dem Abitur für ein Praktikum nach Kairo gegangen. Dort habe ich gemerkt, dass mich die Menschen und ihre Geschichten viel mehr interessieren als alte Steine. Also habe ich umgesattelt und Arabistik studiert.' },
+        { s: 'm', n: 'Moderator', t: 'Was ist die größte Schwierigkeit beim Übersetzen aus dem Arabischen?' },
+        { s: 'w', n: 'Hanna Berger', t: 'Viele denken an die Grammatik, aber die ist erstaunlicherweise nicht das Hauptproblem. Schwieriger ist, dass in vielen Romanen Hocharabisch und Dialekt nebeneinanderstehen. Die Erzählung ist in der Standardsprache geschrieben, die Dialoge aber oft im ägyptischen Dialekt. Im Deutschen gibt es dafür keine echte Entsprechung. Wenn ich die Figuren Berlinerisch oder Bayerisch reden lasse, klingt das lächerlich.' },
+        { s: 'm', n: 'Moderator', t: 'Wie lösen Sie das?' },
+        { s: 'w', n: 'Hanna Berger', t: 'Ich versuche, den Unterschied über den Satzbau und die Wortwahl spürbar zu machen: In den Dialogen verwende ich kürzere Sätze und eine lockere Umgangssprache. Perfekt ist das nie. Übersetzen bedeutet immer, Verluste in Kauf zu nehmen.' },
+        { s: 'm', n: 'Moderator', t: 'Arabische Literatur hat es auf dem deutschen Buchmarkt nicht leicht. Woran liegt das?' },
+        { s: 'w', n: 'Hanna Berger', t: 'Die Verlage scheuen das Risiko. Eine Übersetzung ist teuer, und die Verkaufszahlen sind meist bescheiden. Hinzu kommt, dass viele Leser bei arabischer Literatur nur an Krieg und Konflikte denken. Dabei gibt es wunderbare Liebesromane, Krimis und sogar Science-Fiction.' },
+        { s: 'm', n: 'Moderator', t: 'Kann man vom Übersetzen leben?' },
+        { s: 'w', n: 'Hanna Berger', t: 'Ehrlich gesagt nur knapp. Deshalb unterrichte ich zusätzlich an der Universität. Aber ich würde den Beruf trotzdem jederzeit wieder wählen, weil ich das Gefühl habe, Brücken zwischen zwei Welten zu bauen.' }
+      ], [
+        { q: 'Wie kam Frau Berger zur arabischen Sprache?', o: ['Bei einem Praktikum in Kairo entdeckte sie ihr Interesse für die Menschen.', 'Durch ihr Archäologiestudium in Deutschland.', 'Durch ihre arabischsprachige Familie.'], a: 'Bei einem Praktikum in Kairo entdeckte sie ihr Interesse für die Menschen.' },
+        { q: 'Was ist laut Frau Berger die größte Schwierigkeit beim Übersetzen?', o: ['Der Wechsel zwischen Hochsprache und Dialekt.', 'Die komplizierte arabische Grammatik.', 'Die vielen Fachbegriffe.'], a: 'Der Wechsel zwischen Hochsprache und Dialekt.' },
+        { q: 'Warum übersetzt sie ägyptische Dialoge nicht in einen deutschen Dialekt?', o: ['Weil das lächerlich wirken würde.', 'Weil die Verlage das verbieten.', 'Weil sie selbst keinen Dialekt spricht.'], a: 'Weil das lächerlich wirken würde.' },
+        { q: 'Wie übersetzt sie die Dialoge?', o: ['Mit kürzeren Sätzen und Umgangssprache.', 'Sie lässt sie auf Arabisch stehen.', 'Sie ersetzt sie durch Erzähltext.'], a: 'Mit kürzeren Sätzen und Umgangssprache.' },
+        { q: 'Warum veröffentlichen deutsche Verlage wenig arabische Literatur?', o: ['Weil Übersetzungen teuer sind und sich schlecht verkaufen.', 'Weil es kaum gute arabische Romane gibt.', 'Weil es zu wenige Übersetzer gibt.'], a: 'Weil Übersetzungen teuer sind und sich schlecht verkaufen.' },
+        { q: 'Was sagt Frau Berger über ihren Beruf?', o: ['Sie würde ihn trotz des geringen Verdienstes wieder wählen.', 'Sie möchte bald ganz an die Universität wechseln.', 'Sie kann sehr gut davon leben.'], a: 'Sie würde ihn trotz des geringen Verdienstes wieder wählen.' }
+      ]), 2),
+      nr(telc2([
+        { s: 'w', n: 'Moderatorin', t: 'Willkommen zu unserer Diskussion im Campusradio. In Baden-Württemberg zahlen Studierende aus Ländern außerhalb der Europäischen Union seit einigen Jahren Studiengebühren von eintausendfünfhundert Euro pro Semester. Andere Bundesländer überlegen, diesem Beispiel zu folgen. Bei mir sind Professor Klaus Neumann, Bildungsökonom, und Nadia Hamdi von der Studierendenvertretung. Herr Neumann, sind solche Gebühren gerecht?' },
+        { s: 'm', n: 'Prof. Klaus Neumann', t: 'Ich halte sie zumindest für nachvollziehbar. Ein Studienplatz kostet den Staat pro Jahr mehrere tausend Euro. Diese Kosten tragen die Steuerzahler, und viele internationale Studierende verlassen Deutschland nach dem Abschluss wieder. Ein moderater Beitrag erscheint mir deshalb vertretbar, solange es Ausnahmen für Bedürftige gibt.' },
+        { s: 'w2', n: 'Nadia Hamdi', t: 'Da muss ich widersprechen. Erstens bleibt inzwischen ein großer Teil der internationalen Absolventen in Deutschland und zahlt hier Steuern. Zweitens herrscht in vielen Branchen Fachkräftemangel. Gebühren schrecken genau die Talente ab, die wir dringend brauchen.' },
+        { s: 'w', n: 'Moderatorin', t: 'Gibt es denn Zahlen dazu, wie sich die Gebühren ausgewirkt haben?' },
+        { s: 'm', n: 'Prof. Klaus Neumann', t: 'Nach der Einführung ist die Zahl der Studienanfänger aus Ländern außerhalb der EU in Baden-Württemberg zunächst deutlich gesunken. Inzwischen hat sie sich aber teilweise wieder erholt.' },
+        { s: 'w2', n: 'Nadia Hamdi', t: 'Teilweise, genau. Und wir sollten nicht vergessen, wer wegbleibt: vor allem Studierende aus ärmeren Ländern, für die eintausendfünfhundert Euro pro Semester ein Vermögen sind. Wer aus einer reichen Familie kommt, lässt sich davon nicht abhalten. Gebühren verstärken also die soziale Ungleichheit.' },
+        { s: 'm', n: 'Prof. Klaus Neumann', t: 'Das Argument nehme ich ernst. Deshalb plädiere ich für ein großzügiges Stipendiensystem, das aus den Gebühren finanziert wird.' },
+        { s: 'w2', n: 'Nadia Hamdi', t: 'Das klingt in der Theorie gut. In der Praxis fließt das Geld aber oft in den allgemeinen Haushalt und kommt bei den Studierenden nie an.' },
+        { s: 'w', n: 'Moderatorin', t: 'Herr Neumann, Frau Hamdi, vielen Dank für diese lebhafte Diskussion.' }
+      ], 'Diskussion im Campusradio', [
+        { q: 'In Baden-Württemberg zahlen alle ausländischen Studierenden Studiengebühren.', a: false },
+        { q: 'Herr Neumann hält moderate Gebühren für vertretbar, wenn es Ausnahmen für Bedürftige gibt.', a: true },
+        { q: 'Frau Hamdi meint, dass die meisten internationalen Absolventen Deutschland verlassen.', a: false },
+        { q: 'Frau Hamdi befürchtet, dass Gebühren dringend benötigte Fachkräfte abschrecken.', a: true },
+        { q: 'Nach der Einführung der Gebühren ist die Zahl der Studienanfänger aus Nicht-EU-Ländern zunächst gesunken.', a: true },
+        { q: 'Laut Frau Hamdi lassen sich vor allem Studierende aus reichen Familien abschrecken.', a: false },
+        { q: 'Herr Neumann schlägt vor, mit den Gebühren Stipendien zu finanzieren.', a: true },
+        { q: 'Frau Hamdi ist überzeugt, dass das Geld aus den Gebühren den Studierenden zugutekommt.', a: false }
+      ]), 3),
+      nr(telc3([
+        { s: 'm', n: 'Professor', t: 'Guten Morgen, meine Damen und Herren. In der letzten Sitzung haben wir das Modell des Homo oeconomicus kennengelernt, also des Menschen, der stets rational handelt und seinen Nutzen maximiert. Heute wollen wir uns ansehen, warum dieses Modell in der Realität häufig versagt.' },
+        { s: 'm', n: 'Professor', t: 'Die Verhaltensökonomie hat gezeigt, dass Menschen systematisch von rationalen Entscheidungen abweichen. Ein bekanntes Beispiel ist die Macht der Voreinstellung. Wenn Arbeitnehmer automatisch in eine betriebliche Altersvorsorge aufgenommen werden und aktiv widersprechen müssen, um auszutreten, bleiben die allermeisten dabei. Müssen sie sich dagegen selbst anmelden, nimmt nur ein Bruchteil teil, obwohl die Vorteile in beiden Fällen dieselben sind.' },
+        { s: 'm', n: 'Professor', t: 'Diese Erkenntnis nutzt man beim sogenannten Nudging. Das englische Wort nudge bedeutet so viel wie Stups oder sanfter Anstoß. Gemeint sind Maßnahmen, die Menschen zu einem bestimmten Verhalten bewegen, ohne ihnen etwas zu verbieten oder finanzielle Anreize zu setzen. In Kantinen etwa werden Obst und Salat auf Augenhöhe platziert, während Süßigkeiten weiter unten stehen. Studien zeigen, dass dadurch tatsächlich gesünder gegessen wird.' },
+        { s: 'm', n: 'Professor', t: 'Geprägt wurde der Begriff von dem Ökonomen Richard Thaler und dem Juristen Cass Sunstein. Thaler erhielt im Jahr zweitausendsiebzehn den Nobelpreis für Wirtschaftswissenschaften.' },
+        { s: 'm', n: 'Professor', t: 'Kritiker werfen dem Nudging allerdings vor, die Menschen zu manipulieren. Schließlich wirkt es gerade deshalb, weil es unbewusst bleibt. Die Befürworter entgegnen, dass es ohnehin keine neutrale Gestaltung gibt: Irgendetwas muss in der Kantine ja auf Augenhöhe stehen. Entscheidend sei daher, dass Nudges transparent sind und dem Wohl der Betroffenen dienen. Diese ethische Frage wird uns in der nächsten Woche beschäftigen.' }
+      ], [
+        { q: 'Wie handelt der Homo oeconomicus? ___', a: 'stets rational, er maximiert seinen Nutzen', kw: ['rational', 'nutzen', 'vernünftig'] },
+        { q: 'Wie viele Arbeitnehmer bleiben bei automatischer Aufnahme in der Altersvorsorge? ___', a: 'die allermeisten', kw: ['meisten', 'fast alle', 'mehrheit'] },
+        { q: 'Was bedeutet das englische Wort „nudge“? ___', a: 'Stups / sanfter Anstoß', kw: ['stups', 'anstoß', 'schubs'] },
+        { q: 'Wie bringt man Kantinengäste dazu, gesünder zu essen? ___', a: 'Obst und Salat werden auf Augenhöhe platziert.', kw: ['augenhöhe', 'obst', 'salat'] },
+        { q: 'Welchen Beruf hat Cass Sunstein? ___', a: 'Jurist', kw: ['jurist', 'rechtswissenschaft'] },
+        { q: 'Was werfen Kritiker dem Nudging vor? ___', a: 'Manipulation', kw: ['manipul'] },
+        { q: 'Welche Bedingung müssen Nudges laut den Befürwortern erfüllen? (eine) ___', a: 'Sie müssen transparent sein und dem Wohl der Betroffenen dienen.', kw: ['transparen', 'wohl'] }
+      ]), 4)
+    ]
   };
 })();

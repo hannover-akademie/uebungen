@@ -82,6 +82,7 @@
           f.innerHTML = '<span class="trophy">🏆</span><span><strong></strong><small></small><em class="ar">امتحان نهائي للمستوى كاملًا: مفردات وقواعد وقراءة وكتابة</em></span><span class="go">' + (k.final.fertig ? 'Starten →' : 'bald') + '</span>';
           f.querySelector('strong').textContent = k.final.titel;
           f.querySelector('small').textContent = k.final.text || '';
+          if (k.final.textAr) f.querySelector('em').textContent = k.final.textAr;
           sec.appendChild(f);
         }
         box.appendChild(sec);

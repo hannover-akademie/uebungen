@@ -10,7 +10,7 @@ window.HA_CONFIG = {
     {
       id: 'a1',
       name: 'Netzwerk neu A1',
-      final: { titel: 'Finaltest A1', text: 'Abschlusstest für das ganze Niveau A1: Wortschatz, Grammatik, Lesen und Schreiben', fertig: true },
+      final: { titel: 'Finaltest A1', text: 'Abschlusstest für das ganze Niveau A1: Wortschatz, Grammatik, Lesen, Hören und Schreiben', textAr: 'امتحان نهائي للمستوى كاملًا: مفردات وقواعد وقراءة واستماع وكتابة', fertig: true },
       kapitel: [
         { nr: 1, titel: 'Guten Tag!', fertig: true },
         { nr: 2, titel: 'Freunde, Kollegen und ich', fertig: true },
@@ -29,7 +29,7 @@ window.HA_CONFIG = {
     {
       id: 'a2',
       name: 'Netzwerk neu A2',
-      final: { titel: 'Finaltest A2', text: 'Abschlusstest für das ganze Niveau A2: Wortschatz, Redemittel, Grammatik, Lesen und Schreiben', fertig: true },
+      final: { titel: 'Finaltest A2', text: 'Abschlusstest für das ganze Niveau A2: Wortschatz, Redemittel, Grammatik, Lesen, Hören und Schreiben', textAr: 'امتحان نهائي للمستوى كاملًا: مفردات وتعبيرات وقواعد وقراءة واستماع وكتابة', fertig: true },
       kapitel: [
         { nr: 1, titel: 'Und was machst du?', fertig: true },
         { nr: 2, titel: 'Nach der Schulzeit', fertig: true },
@@ -48,7 +48,7 @@ window.HA_CONFIG = {
     {
       id: 'b1',
       name: 'Netzwerk neu B1',
-      final: { titel: 'Finaltest B1', text: 'Modellprüfung für das ganze Niveau B1 wie Goethe und telc: Lesen, Sprachbausteine, Grammatik, Wortschatz und Schreiben', fertig: true },
+      final: { titel: 'Finaltest B1', text: 'Modellprüfung für das ganze Niveau B1 wie Goethe und telc: Lesen, Sprachbausteine, Grammatik, Wortschatz, Hören und Schreiben', textAr: 'امتحان نهائي على نمط Goethe و telc: قراءة وعناصر لغوية وقواعد ومفردات واستماع وكتابة', fertig: true },
       kapitel: [
         { nr: 1, titel: 'Gute Reise!', fertig: true },
         { nr: 2, titel: 'Das ist ja praktisch!', fertig: true },
@@ -67,6 +67,7 @@ window.HA_CONFIG = {
     {
       id: 'b2',
       name: 'Aspekte neu B2',
+      final: { titel: 'Finaltest B2', text: 'Modellprüfung für das ganze Niveau B2 wie Goethe und telc: Lesen, Sprachbausteine, Hören, Schreiben und Sprechen', textAr: 'امتحان نهائي على نمط Goethe و telc يشمل المهارات الأربع: القراءة والاستماع والكتابة والمحادثة', fertig: true },
       kapitel: [
         { nr: 1, titel: 'Heimat ist …', fertig: true },
         { nr: 2, titel: 'Sprich mit mir!', fertig: true },
@@ -83,6 +84,7 @@ window.HA_CONFIG = {
     {
       id: 'c1',
       name: 'Aspekte neu C1',
+      final: { titel: 'Finaltest C1', text: 'Modellprüfung für das ganze Niveau C1 wie Goethe C1 und telc C1 Hochschule: Lesen, Sprachbausteine, Hören, Schreiben und Sprechen', textAr: 'امتحان نهائي على نمط Goethe C1 و telc C1 Hochschule يشمل المهارات الأربع: القراءة والاستماع والكتابة والمحادثة', fertig: true },
       kapitel: [
         { nr: 1, titel: 'Alltägliches', fertig: true },
         { nr: 2, titel: 'Hast du Worte?', fertig: true },

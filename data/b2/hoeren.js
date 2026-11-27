@@ -39,6 +39,16 @@
       items: items };
   }
 
+  // Goethe B2 Hören Teil 3: Radiosendung mit mehreren Personen – Wer sagt was?
+  function g3wer(audio, o, items) {
+    return { teil: 'Hören', titel: 'Hören Teil 3 (wie Goethe B2): Eine Diskussion – Wer sagt was?', typ: 'select', o: o, plays: 1, rate: RATE, audio: audio, audioTitel: 'Diskussion im Radio',
+      anweisung: 'Sie hören eine Diskussion aus dem Radio. Sie hören den Text einmal. Lesen Sie zuerst die Aussagen. Wer sagt was? Wählen Sie.',
+      anweisungAr: 'ستسمع نقاشًا إذاعيًا مرة واحدة فقط. اقرأ العبارات أولًا، ثم حدّد: من قال كل عبارة؟',
+      items: items };
+  }
+  // Finaltest: alle vier Teile wie Goethe-Zertifikat B2 (C1 = Teil 1 … C4 = Teil 4)
+  function nr(t, n) { t.teil = 'C' + n; return t; }
+
   window.HOEREN = {
     // ------------------------------------------------ Kapitel 1: Heimat ist …
     k1: [g2([
@@ -212,6 +222,75 @@
       { q: 'Einige Bewohner haben dem Roboter einen Namen gegeben.', a: true },
       { q: 'Dr. Feld hält die Sorge, dass Personal abgebaut wird, für unbegründet.', a: false },
       { q: 'Pflegeroboter sind im Moment noch sehr teuer.', a: true }
-    ])]
+    ])],
+
+    // ------------------------------------------------ Finaltest B2: Hören Teil 1–4
+    final: [
+      nr(g1([
+        { q: 'Die Stadt will neue Radwege bauen.', a: true,
+          audio: [{ s: 'w', t: 'Und nun zu den Nachrichten aus der Region. Die Stadt Hannover will den Radverkehr stärker fördern. Wie die Stadtverwaltung gestern mitteilte, sollen bis Ende nächsten Jahres zwanzig Kilometer neue Radwege entstehen. Außerdem werden an allen großen Bahnhöfen überdachte Fahrradparkhäuser gebaut. Kritik kommt vom Einzelhandelsverband: Die Geschäftsleute befürchten, dass durch die neuen Radwege zahlreiche Parkplätze in der Innenstadt wegfallen.' }] },
+        { typ: 'mcq', q: 'Wovor haben die Geschäftsleute Angst?', o: ['Dass Parkplätze in der Innenstadt verschwinden.', 'Dass weniger Kunden mit dem Fahrrad kommen.', 'Dass die Bauarbeiten zu lange dauern.'], a: 'Dass Parkplätze in der Innenstadt verschwinden.' },
+        { q: 'Das Vorstellungsgespräch findet wie geplant am Donnerstag statt.', a: false,
+          audio: [{ s: 'm', t: 'Hallo Frau Becker, hier ist Stefan Krause von der Personalabteilung. Es geht um Ihr Vorstellungsgespräch am Donnerstag. Leider ist Herr Doktor Lang, der das Gespräch führen sollte, an diesem Tag auf einer Dienstreise. Wir würden den Termin deshalb gern auf Montag um zehn Uhr verschieben. Falls Ihnen das nicht passt, rufen Sie mich bitte bis morgen Mittag zurück. Bringen Sie bitte außerdem Ihre Zeugnisse im Original mit.' }] },
+        { typ: 'mcq', q: 'Was soll Frau Becker mitbringen?', o: ['Ihre Zeugnisse im Original.', 'Eine Kopie ihres Lebenslaufs.', 'Ihren Personalausweis.'], a: 'Ihre Zeugnisse im Original.' },
+        { q: 'Im Winter braucht der Körper kaum Flüssigkeit.', a: false,
+          audio: [{ s: 'w', t: 'In unserer Rubrik Gesundheit geht es heute um das Thema Trinken. Viele Menschen trinken im Winter zu wenig, weil sie weniger Durst haben als im Sommer. Dabei braucht der Körper auch in der kalten Jahreszeit etwa anderthalb Liter Flüssigkeit am Tag. Wer zu wenig trinkt, wird schneller müde und kann sich schlechter konzentrieren. Unser Tipp: Stellen Sie sich morgens eine Flasche Wasser auf den Schreibtisch. So sehen Sie den ganzen Tag, wie viel Sie schon getrunken haben.' }] },
+        { typ: 'mcq', q: 'Was empfiehlt die Sprecherin?', o: ['Eine Wasserflasche auf den Schreibtisch zu stellen.', 'Im Winter mehr Tee als Wasser zu trinken.', 'Erst dann zu trinken, wenn man Durst hat.'], a: 'Eine Wasserflasche auf den Schreibtisch zu stellen.' },
+        { q: 'Die Sonderausstellung ist verlängert worden.', a: true,
+          audio: [{ s: 'm', t: 'Liebe Besucherinnen und Besucher, wir möchten Sie darauf hinweisen, dass unser Museum heute bereits um sechzehn Uhr schließt, da am Abend eine geschlossene Veranstaltung stattfindet. Die Sonderausstellung „Ägypten am Nil“ im zweiten Stock ist bis zum Ende des Monats verlängert worden. Führungen auf Arabisch und Deutsch finden jeden Samstag um vierzehn Uhr statt. Tickets dafür erhalten Sie an der Kasse im Erdgeschoss.' }] },
+        { typ: 'mcq', q: 'Wo bekommt man Tickets für die Führungen?', o: ['An der Kasse im Erdgeschoss.', 'Im zweiten Stock.', 'Nur im Internet.'], a: 'An der Kasse im Erdgeschoss.' }
+      ]), 1),
+      nr(g2([
+        { s: 'm', n: 'Moderator', t: 'Wie werden wir in zwanzig Jahren wohnen? Darüber spreche ich mit der Architektin und Stadtplanerin Miriam Scholz. Frau Scholz, wird sich unser Wohnen tatsächlich so stark verändern?' },
+        { s: 'w', n: 'Miriam Scholz', t: 'In manchen Bereichen ja. Die Städte wachsen, und Wohnraum wird immer teurer. Deshalb werden die Wohnungen im Durchschnitt kleiner. Dafür werden wir mehr Räume gemeinsam nutzen, zum Beispiel Gästezimmer, Werkstätten oder große Küchen, die sich mehrere Haushalte teilen.' },
+        { s: 'm', n: 'Moderator', t: 'Das klingt nach einer Wohngemeinschaft für Erwachsene.' },
+        { s: 'w', n: 'Miriam Scholz', t: 'In gewisser Weise schon. Allerdings hat jeder weiterhin seine eigene, abgeschlossene Wohnung. Die gemeinsamen Räume sind ein Angebot, keine Pflicht. In unseren Projekten haben wir festgestellt, dass gerade ältere Menschen davon profitieren, weil sie weniger einsam sind.' },
+        { s: 'm', n: 'Moderator', t: 'Welche Rolle spielt die Technik?' },
+        { s: 'w', n: 'Miriam Scholz', t: 'Eine größere, als viele denken, aber eine kleinere, als die Werbung verspricht. Sensoren, die automatisch die Heizung regeln, sparen tatsächlich viel Energie. Einen Kühlschrank, der selbstständig Milch bestellt, braucht dagegen kaum jemand.' },
+        { s: 'm', n: 'Moderator', t: 'Und wie sieht es auf dem Land aus?' },
+        { s: 'w', n: 'Miriam Scholz', t: 'Dort erwarte ich eine Wiederbelebung. Seit viele Menschen im Homeoffice arbeiten können, ziehen junge Familien wieder in Dörfer, die lange Zeit Einwohner verloren hatten. Damit das funktioniert, braucht es aber schnelles Internet und gute Busverbindungen. Hier muss die Politik noch viel tun.' },
+        { s: 'm', n: 'Moderator', t: 'Zum Schluss: Wie wohnen Sie selbst?' },
+        { s: 'w', n: 'Miriam Scholz', t: 'Ich wohne mit meinem Mann in einem Mehrgenerationenhaus. Wir teilen uns einen Garten mit vier anderen Familien. Für mich ist das die ideale Mischung aus Gemeinschaft und Privatsphäre.' }
+      ], [
+        { q: 'Was erwartet Frau Scholz für die Wohnungen in den Städten?', o: ['Sie werden im Durchschnitt kleiner.', 'Sie werden deutlich größer.', 'Sie werden billiger.'], a: 'Sie werden im Durchschnitt kleiner.' },
+        { q: 'Was sagt sie über die gemeinsamen Räume?', o: ['Man kann sie nutzen, muss es aber nicht.', 'Alle Bewohner müssen sie nutzen.', 'Sie ersetzen die eigene Wohnung.'], a: 'Man kann sie nutzen, muss es aber nicht.' },
+        { q: 'Wer profitiert laut Frau Scholz besonders von solchen Wohnprojekten?', o: ['Ältere Menschen.', 'Studierende.', 'Familien mit kleinen Kindern.'], a: 'Ältere Menschen.' },
+        { q: 'Wie beurteilt sie die Technik im Haushalt?', o: ['Manche Technik ist nützlich, manche überflüssig.', 'Sie wird das Wohnen völlig verändern.', 'Sie ist für die meisten Menschen zu teuer.'], a: 'Manche Technik ist nützlich, manche überflüssig.' },
+        { q: 'Was ist nötig, damit das Leben auf dem Land attraktiv wird?', o: ['Schnelles Internet und gute Busverbindungen.', 'Mehr Arbeitsplätze in Fabriken.', 'Günstigere Grundstücke.'], a: 'Schnelles Internet und gute Busverbindungen.' }
+      ]), 2),
+      nr(g3wer([
+        { s: 'w', n: 'Moderatorin', t: 'Willkommen zu unserer Gesprächsrunde. In einigen Ländern dürfen Jugendliche unter sechzehn Jahren keine sozialen Netzwerke mehr nutzen. Sollten wir das auch in Deutschland einführen? Bei mir sind der Lehrer Jonas Brandt und die Medienpädagogin Derya Yilmaz. Herr Brandt, wie erleben Sie das an Ihrer Schule?' },
+        { s: 'm', n: 'Jonas Brandt', t: 'Ich sehe täglich, wie sehr die Schüler von ihren Handys abgelenkt sind. Viele schlafen zu wenig, weil sie bis spät in die Nacht Videos schauen. Ein Verbot wäre aus meiner Sicht ein klares Signal, dass wir die Gesundheit der Kinder ernst nehmen.' },
+        { s: 'w2', n: 'Derya Yilmaz', t: 'Ich verstehe die Sorge, halte ein Verbot aber für wenig realistisch. Jugendliche finden immer einen Weg, solche Regeln zu umgehen. Viel wichtiger ist es, ihnen beizubringen, kritisch mit Inhalten umzugehen.' },
+        { s: 'w', n: 'Moderatorin', t: 'Aber wer soll das leisten? Die Eltern sind doch oft selbst überfordert.' },
+        { s: 'w2', n: 'Derya Yilmaz', t: 'Genau deshalb brauchen wir Medienbildung als festes Schulfach. Dort könnten die Kinder lernen, Falschmeldungen zu erkennen und ihre Daten zu schützen.' },
+        { s: 'm', n: 'Jonas Brandt', t: 'Ein neues Fach klingt gut, aber unsere Lehrpläne sind schon jetzt überfüllt. Außerdem sind die Plattformen so gestaltet, dass man möglichst lange online bleibt. Dagegen kommen auch gut informierte Jugendliche kaum an.' },
+        { s: 'w', n: 'Moderatorin', t: 'Es gibt ja auch positive Seiten. Viele Jugendliche finden in sozialen Netzwerken Freunde mit ähnlichen Interessen.' },
+        { s: 'w2', n: 'Derya Yilmaz', t: 'Das ist ein wichtiger Punkt. Gerade Jugendliche, die sich in ihrer Umgebung als Außenseiter fühlen, finden online oft Unterstützung.' },
+        { s: 'm', n: 'Jonas Brandt', t: 'Das bestreite ich nicht. Trotzdem sollten wir die Plattformen stärker in die Pflicht nehmen. Sie müssten zum Beispiel das Alter ihrer Nutzer zuverlässig überprüfen.' }
+      ], ['Moderatorin', 'Herr Brandt', 'Frau Yilmaz'], [
+        { q: 'In manchen Ländern gibt es schon ein Verbot für Jugendliche.', a: 'Moderatorin' },
+        { q: 'Viele Schüler schlafen wegen ihrer Handys zu wenig.', a: 'Herr Brandt' },
+        { q: 'Jugendliche würden ein Verbot einfach umgehen.', a: 'Frau Yilmaz' },
+        { q: 'Eltern sind beim Thema Medien oft überfordert.', a: 'Moderatorin' },
+        { q: 'Medienbildung sollte ein Schulfach werden.', a: 'Frau Yilmaz' },
+        { q: 'In den Lehrplänen ist kein Platz für ein weiteres Fach.', a: 'Herr Brandt' },
+        { q: 'Außenseiter finden im Internet oft Unterstützung.', a: 'Frau Yilmaz' },
+        { q: 'Die Plattformen sollten das Alter der Nutzer kontrollieren.', a: 'Herr Brandt' }
+      ]), 3),
+      nr(g4([
+        { s: 'm', n: 'Dr. Weiß', t: 'Meine Damen und Herren, ich freue mich, dass Sie heute so zahlreich erschienen sind. In meinem Vortrag möchte ich Ihnen zeigen, warum es sich lohnt, mehrere Sprachen zu sprechen, und zwar nicht nur aus beruflichen Gründen.' },
+        { s: 'm', n: 'Dr. Weiß', t: 'Lange Zeit glaubte man, dass Kinder, die zweisprachig aufwachsen, durcheinanderkämen und in der Schule schlechter abschnitten. Heute wissen wir, dass das nicht stimmt. Zwar beginnen zweisprachige Kinder manchmal etwas später zu sprechen, aber diesen Rückstand holen sie schnell auf.' },
+        { s: 'm', n: 'Dr. Weiß', t: 'Interessant ist vor allem, was im Gehirn passiert. Wer mehrere Sprachen spricht, muss ständig entscheiden, welche Sprache gerade gebraucht wird, und die andere unterdrücken. Dieses tägliche Training verbessert offenbar die Fähigkeit, sich zu konzentrieren und zwischen verschiedenen Aufgaben zu wechseln.' },
+        { s: 'm', n: 'Dr. Weiß', t: 'Mehrere Studien deuten außerdem darauf hin, dass bei mehrsprachigen Menschen die ersten Anzeichen einer Demenz im Durchschnitt einige Jahre später auftreten. Ich möchte allerdings betonen, dass die Ergebnisse noch nicht eindeutig sind und weitere Forschung nötig ist.' },
+        { s: 'm', n: 'Dr. Weiß', t: 'Und nun die gute Nachricht für alle Erwachsenen hier im Saal: Es ist nie zu spät. Auch wer erst mit sechzig Jahren eine neue Sprache lernt, trainiert sein Gehirn. Entscheidend ist nicht die Perfektion, sondern die regelmäßige Anwendung. Im zweiten Teil meines Vortrags stelle ich Ihnen einige Methoden vor, mit denen das besonders gut gelingt.' }
+      ], [
+        { q: 'Was glaubte man früher über zweisprachige Kinder?', o: ['Sie würden durcheinanderkommen und in der Schule schlechter sein.', 'Sie würden besonders früh sprechen lernen.', 'Sie würden später gute Übersetzer werden.'], a: 'Sie würden durcheinanderkommen und in der Schule schlechter sein.' },
+        { q: 'Was sagt der Redner über die Sprachentwicklung zweisprachiger Kinder?', o: ['Ein anfänglicher Rückstand wird schnell aufgeholt.', 'Sie sprechen immer früher als andere Kinder.', 'Sie haben dauerhaft Probleme in der Schule.'], a: 'Ein anfänglicher Rückstand wird schnell aufgeholt.' },
+        { q: 'Was trainieren mehrsprachige Menschen laut dem Vortrag jeden Tag?', o: ['Die Konzentration und den Wechsel zwischen Aufgaben.', 'Das Gedächtnis für Vokabeln.', 'Ihre Aussprache.'], a: 'Die Konzentration und den Wechsel zwischen Aufgaben.' },
+        { q: 'Was sagt der Redner über Mehrsprachigkeit und Demenz?', o: ['Die Ergebnisse der Studien sind noch nicht eindeutig.', 'Mehrsprachige Menschen erkranken nie an Demenz.', 'Es gibt sicher keinen Zusammenhang.'], a: 'Die Ergebnisse der Studien sind noch nicht eindeutig.' },
+        { q: 'Was ist laut dem Redner beim Sprachenlernen im Alter entscheidend?', o: ['Die Sprache regelmäßig anzuwenden.', 'Die Sprache perfekt zu beherrschen.', 'Vor dem sechzigsten Lebensjahr anzufangen.'], a: 'Die Sprache regelmäßig anzuwenden.' }
+      ]), 4)
+    ]
   };
 })();
