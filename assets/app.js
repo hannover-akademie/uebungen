@@ -18,6 +18,7 @@
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function norm(s) { return String(s == null ? '' : s).replace(/[’']/g, "'").replace(/\s+/g, ' ').replace(/\s*([.,!?])\s*$/, '$1').trim().toLowerCase(); }
+  function fold(s) { return norm(s).replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim(); }
   function normLoose(s) { return norm(s).replace(/[.,!?]+$/, ''); }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
   function load() { try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && typeof s === 'object') return s; } catch (e) {} return null; }
@@ -350,7 +351,11 @@
       case 'mcq': return v === it.a;
       case 'tf': return v === (it.a ? 'Richtig' : 'Falsch');
       case 'select': return v === it.a;
-      case 'gap': var acc = Array.isArray(it.a) ? it.a : [it.a]; return acc.some(function (a) { return norm(a) === norm(v); });
+      case 'gap':
+        // Kurzantworten (Hören C1): kw = Schlüsselwörter, eines davon muss in der Antwort vorkommen (ä = ae, ß = ss)
+        // Zahlen zählen nur als ganzes Wort (6 ≠ 600), Wörter auch als Wortteil (protokoll → Übergabeprotokoll)
+        if (it.kw) { var f = fold(v); return f.length > 0 && it.kw.some(function (k) { k = fold(k); return /^\d+$/.test(k) ? (' ' + f + ' ').indexOf(' ' + k + ' ') >= 0 : f.indexOf(k) >= 0; }); }
+        var acc = Array.isArray(it.a) ? it.a : [it.a]; return acc.some(function (a) { return norm(a) === norm(v); });
       case 'match': if (!v) return false; return it.pairs.every(function (p, pi) { return v[pi] === p[1]; });
       case 'order': return Array.isArray(v) && v.join('\n') === it.lines.join('\n');
       case 'words': var ok = (it.a || [it.w.join(' ')]); return ok.some(function (a) { return normLoose(a) === normLoose(v); });
